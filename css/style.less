@@ -25,6 +25,12 @@ body {
     background-color: @background-gray;
     font-family: @sans;
 }
+#content {
+    float: left;
+    > div {
+        float: left;
+    }
+}
 a {
     color: @jpp-blue;
     &:visited {
@@ -55,6 +61,8 @@ h3 {
 p {
     margin-top: 0;
     font-size: 0.8em;
+    line-height: 1.4em;
+    color: #666;
 }
 
 .disclaimer {
@@ -254,34 +262,56 @@ footer {
 }
 
 /* Page: Main */
+.page-main {
+    background-image: url("../imgs/bg-main.png");
+    background-position: 10px 300px;
+    background-repeat: no-repeat;
+    min-height: 780px;
+}
 #page-main  {
-    .logo-big span {
-        display: block;
-        text-align: right;
-        font-size: 70px;
-        font-family: gill sans;
-        line-height: 60px;
-        text-transform: uppercase;
-        &.c1 { color: @jpp-logo-red; }
-        &.c2 { color: @jpp-logo-blue; }
-        &.c3 { color: @jpp-logo-green; }
+    .logo-big {
+        padding-top: 15px;
+        span {
+            display: block;
+            text-align: right;
+            font-size: 70px;
+            font-family: gill sans;
+            line-height: 60px;
+            text-transform: uppercase;
+
+            &.c1 { color: @jpp-logo-red; }
+            &.c2 { color: @jpp-logo-blue; }
+            &.c3 { color: @jpp-logo-green; }
+        }
+    }
+
+    .details {
+        padding: 1em;
+        background-color: #fff;
+        left: -18px;
+        position: relative;
     }
 
     .sliders {
         .box-shadow(2px 2px 2px #CCCCCC);
         background-color: #FFFFFF;
-        left: -15px;
+        left: -18px;
         padding: 15px;
         position: relative;
-        top: -15px;
         width: 738px;
+        z-index: 1000;
     }
     h2 {
-        margin: 15px 0;
+        margin: 15px 0 0;
     }
 }
 
 /* Page: About */
+.page-about {
+    background-image: url("../imgs/bg-about.png");
+    background-position: 130px 0;
+    background-repeat: no-repeat;
+}
 #page-about {
     .first {
         padding-left: 35px;
@@ -326,6 +356,11 @@ footer {
 }
 
 /* Page: News */
+.page-news {
+    background-image: url("../imgs/bg-news.png");
+    background-position: 20px 0;
+    background-repeat: no-repeat;
+}
 #page-news {
     .boxy {
         border: 1px solid @light-gray;
@@ -377,6 +412,12 @@ footer {
 }
 
 /* Page: Contact */
+.page-contact {
+    background-image: url("../imgs/bg-contact.png");
+    background-position: 160px 122px;
+    background-repeat: no-repeat;
+    min-height: 658px;
+}
 #page-contact {
     .contact {
         padding-top: 2em;
