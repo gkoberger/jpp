@@ -1,0 +1,172 @@
+@import 'lib';
+
+/* Colors */
+@topbar: #fdb302;
+@background-gray: #f0efef;
+
+@jpp-blue: #669999;
+@jpp-green: #336666;
+
+@jpp-logo-red: #cc3333;
+@jpp-logo-blue: #006699;
+@jpp-logo-green: #99cc33;
+
+/* Font stacks */
+@sans: "Microsoft Sans Serif", "Helvetica", "Arial", sans-serif;
+@gills: "Gill Sans", Calibri, "Trebuchet MS", sans-serif;
+
+/* Basic stuff */
+body {
+    background-color: @background-gray;
+    font-family: @sans;
+}
+.center {
+    width:1060px;
+    margin: auto;
+}
+
+/* Header area */
+header {
+    overflow: hidden;
+    background-color: @topbar;
+    padding-bottom: 0;
+    h1 {
+        float: left;
+        margin: 0 40px 0 0;
+        width: 113px;
+        height: 36px;
+        a {
+            background-image: url('../imgs/logo.png');
+            background-repeat: no-repeat;
+            text-indent: -90000px;
+            display: block;
+            height: 36px;
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+    }
+    a {
+        text-decoration: none;
+        text-transform: uppercase;
+        color: @jpp-blue;
+        font-family: @sans;
+        font-size: 14px;
+        &:visited {
+            color: @jpp-blue;
+        }
+    }
+    nav {
+        float: left;
+        ul {
+            margin: 0;
+            padding: 0;
+            li {
+                display: inline-block;
+                a {
+                    display: block;
+                    padding: 0 10px;
+                    line-height: 36px;
+                    height: 36px;
+                    &.on {
+                        background-color: rgba(255,255,255,0.7);
+                    }
+                    &:hover {
+                        background-color: #fff;
+                    }
+                }
+            }
+        }
+    }
+
+    .login {
+        float: right;
+        height: 26px;
+        line-height: 26px;
+        background-color: #fff;
+        display: block;
+        padding: 0 10px;
+        margin: 5px 0;
+    }
+}
+
+/* Content area */
+#page {
+    background-color: #fff;
+    padding: 35px;
+}
+
+/* Footer */
+footer {
+    background-color: #fff;
+    overflow: hidden;
+    padding: 35px 0;
+    border-top: 25px solid @light-gray;
+    a {
+        &:hover {
+            opacity: 0.8;
+        }
+        display: block;
+        float: right;
+        margin: 0 15px;
+        text-indent: -9000px;
+        &.igm {
+            width: 89px;
+            height: 70px;
+            background-image: url(../imgs/sponsor-igm.png);
+        }
+        &.rit {
+            width: 102px;
+            height: 31px;
+            margin-top: 5px;
+            background-image: url(../imgs/sponsor-rit.png);
+        }
+        &.ms {
+            width: 101px;
+            height: 46px;
+            background-image: url(../imgs/sponsor-ms.png);
+        }
+    }
+}
+
+/* Main page */
+#main  {
+    .disclaimer {
+        color: @jpp-green;
+        font-size: 11px;
+        text-align: right;
+    }
+    h2 {
+        font-family: @gills;
+        color: @note-gray;
+        font-size: 36px;
+        font-weight: normal;
+        margin: 15px 0;
+    }
+
+    .logo-big span {
+        display: block;
+        text-align: right;
+        font-size: 70px;
+        font-family: gill sans;
+        line-height: 60px;
+        text-transform: uppercase;
+        &.c1 { color: @jpp-logo-red; }
+        &.c2 { color: @jpp-logo-blue; }
+        &.c3 { color: @jpp-logo-green; }
+    }
+
+    .sliders {
+        .box-shadow(2px 2px 2px #CCCCCC);
+        background-color: #FFFFFF;
+        left: -15px;
+        padding: 15px;
+        position: relative;
+        top: -15px;
+        width: 738px;
+    }
+
+    p {
+        font-size: 0.8em;
+    }
+}
