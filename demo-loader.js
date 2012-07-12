@@ -24,8 +24,11 @@ loadFromHash();
 
 function loadURL(url) {
     $.get(url, function(data){
-        $('#content').html(data);
+        var $d = $(data);
+        var pagename = $d.attr('id').replace(/#/, '');
+        $('#content').html($d);
         window.location.hash = url;
+        $('#page').attr('class', 'center ' + pagename);
     });
 
     $('a.on').removeClass('on');
