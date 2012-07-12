@@ -6,6 +6,8 @@
 
 @jpp-blue: #669999;
 @jpp-green: #336666;
+@jpp-lime: #c9e394;
+@jpp-yellow: #F2DE92;
 
 @jpp-logo-red: #cc3333;
 @jpp-logo-blue: #006699;
@@ -25,12 +27,22 @@ body {
     margin: auto;
 }
 
-h2 {
+h2, h3 {
+    margin: 0;
+    clear: both;
     font-family: @gills;
     color: @note-gray;
     font-size: 36px;
     font-weight: normal;
-    margin: 15px 0;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+p {
+    margin-top: 0;
+    font-size: 0.8em;
 }
 
 .disclaimer {
@@ -39,6 +51,91 @@ h2 {
     text-align: right;
 }
 
+.controls {
+    margin-top: 1em;
+    text-align: center;
+    .pacman-dot {
+        background-color: @jpp-yellow;
+        .border-radius(15px);
+        box-shadow: 2px 2px 3px #DDDDDD;
+        display: inline-block;
+        height: 10px;
+        width: 10px;
+        margin: 10px;
+        &.spacey {
+            margin: 10px 28px;
+        }
+        &:hover {
+            background-color: darken(@jpp-yellow, 10%);
+        }
+    }
+    .jpp {
+        display: inline-block;
+    }
+}
+
+/* JPP Logo in CSS */
+.jpp {
+    width: 40px;
+    height: 40px;
+    background-color: @jpp-lime;
+    border-radius: 40px;
+    display: block;
+    position: relative;
+
+    &:before {
+        content: " ";
+        width: 0;
+        height: 0;
+        display: block;
+        position: absolute;
+        top: 2px;
+        left: 8px;
+        border-top: 18px solid transparent;
+        border-bottom: 18px solid transparent;
+        border-left: 35px solid white;
+    }
+
+    &:after {
+        content: " ";
+        width: 0;
+        height: 0;
+        display: block;
+        position: absolute;
+        top: 10px;
+        left: 13px;
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+        border-left: 20px solid @jpp-lime;
+    }
+
+    &.rotate {
+        .transform(rotate(-180deg));
+    }
+
+
+    &.small {
+        width: 30px;
+        height: 30px;
+        border-radius: 30px;
+        &:before {
+            top: 2px;
+            left: 7px;
+            border-width: 13px 0 13px 24px;
+        }
+        &:after {
+            top: 9px;
+            left: 11px;
+            border-width: 6px 0 6px 12px;
+        }
+    }
+}
+a.jpp:hover {
+    background-color: darken(@jpp-lime, 10%);
+    &:after {
+        border-left-color: darken(@jpp-lime, 10%);
+    }
+}
 
 /* Header area */
 header {
@@ -167,8 +264,50 @@ footer {
         top: -15px;
         width: 738px;
     }
+    h2 {
+        margin: 15px 0;
+    }
+}
 
-    p {
-        font-size: 0.8em;
+#page-about {
+    .first {
+        padding-left: 35px;
+        .border-box();
+    }
+    .youtube {
+        border: 1px solid @light-gray;
+        clear: both;
+        float: left;
+        margin-bottom: 2em;
+        padding: 2em;
+        background-color: #fff;
+    }
+
+    .types {
+        padding-top: 210px;
+        div {
+            margin-bottom: 4em;
+        }
+    }
+
+    .controls {
+        margin-top: 2em;
+    }
+
+    #achievements {
+        overflow: hidden;
+        .achievement {
+            > img {
+                float: left;
+            }
+            > div {
+                float: left;
+                margin-left: 35px;
+                width: 370px;
+            }
+            .subtitle {
+                color: @note-gray;
+            }
+        }
     }
 }
