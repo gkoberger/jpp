@@ -3,7 +3,7 @@
 
 $('a').click(function(e) {
     var url = $(this).attr('href');
-    if(url.match('http')) return;
+    if(!url || url == '#' || url.match('http')) return;
     e.preventDefault();
     loadURL(url);
 });
@@ -24,11 +24,8 @@ loadFromHash();
 function loadURL(url) {
     $.get(url, function(data){
         $('#content').html(data);
-        if(url != 'main.html') {
-            window.location.hash = url;
-        }
+        window.location.hash = url;
     });
-    if(url == 'main.html') url = "";
 
     $('a.on').removeClass('on');
     $('a[href="' + url + '"]').addClass('on');
