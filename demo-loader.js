@@ -1,9 +1,10 @@
 // This is a collection of little bits of badly written javascript
 // that handles all the demo stuff. It shouldn't be used in the actual site!
 
-$('a').click(function(e) {
+$('a').live('click', function(e) {
     var url = $(this).attr('href');
-    if(!url || url == '#' || url.match('http')) return;
+    if(url.match('http')) return;
+    if(url == '#' || !url) return false;
     e.preventDefault();
     loadURL(url);
 });
