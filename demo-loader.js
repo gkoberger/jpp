@@ -23,7 +23,7 @@ loadFromHash();
 
 function loadURL(url) {
     $.get(url, function(data){
-        $('#page').html(data);
+        $('#content').html(data);
         if(url != 'main.html') {
             window.location.hash = url;
         }

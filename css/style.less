@@ -15,7 +15,7 @@
 @sans: "Microsoft Sans Serif", "Helvetica", "Arial", sans-serif;
 @gills: "Gill Sans", Calibri, "Trebuchet MS", sans-serif;
 
-/* Basic stuff */
+/* General stuff */
 body {
     background-color: @background-gray;
     font-family: @sans;
@@ -24,6 +24,21 @@ body {
     width:1060px;
     margin: auto;
 }
+
+h2 {
+    font-family: @gills;
+    color: @note-gray;
+    font-size: 36px;
+    font-weight: normal;
+    margin: 15px 0;
+}
+
+.disclaimer {
+    color: @jpp-green;
+    font-size: 11px;
+    text-align: right;
+}
+
 
 /* Header area */
 header {
@@ -93,7 +108,7 @@ header {
 /* Content area */
 #page {
     background-color: #fff;
-    padding: 35px;
+    padding: 10px 35px 35px;
 }
 
 /* Footer */
@@ -130,20 +145,7 @@ footer {
 }
 
 /* Main page */
-#main  {
-    .disclaimer {
-        color: @jpp-green;
-        font-size: 11px;
-        text-align: right;
-    }
-    h2 {
-        font-family: @gills;
-        color: @note-gray;
-        font-size: 36px;
-        font-weight: normal;
-        margin: 15px 0;
-    }
-
+#page-main  {
     .logo-big span {
         display: block;
         text-align: right;
