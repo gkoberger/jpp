@@ -9,6 +9,14 @@ $('a').live('click', function(e) {
     loadURL(url);
 });
 
+$('form').live('submit', function(e) {
+    var url = $(this).attr('action');
+    if(url.match('http')) return;
+    if(url == '#' || !url) return false;
+    loadURL(url);
+    return false;
+});
+
 $(window).bind('hashchange', function() {
     loadFromHash();
 });
