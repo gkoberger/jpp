@@ -5,16 +5,20 @@
 @background-gray: #f0efef;
 
 @jpp-blue: #669999;
+@jpp-brightblue: #0066cc;
+@jpp-lightblue: #3399ff;
 @jpp-green: #336666;
 @jpp-lime: #c9e394;
 @jpp-yellow: #F2DE92;
-@jpp-lightblue: #3399ff;
 @jpp-orange: #cc9933;
 @jpp-brown: #663300;
 
 @jpp-logo-red: #cc3333;
 @jpp-logo-blue: #006699;
 @jpp-logo-green: #99cc33;
+
+@jpp-login-blue: #3fa9f5;
+@jpp-login-green: #8db836;
 
 /* Font stacks */
 @sans: "Microsoft Sans Serif", "Helvetica", "Arial", sans-serif;
@@ -275,7 +279,7 @@ footer {
             display: block;
             text-align: right;
             font-size: 70px;
-            font-family: gill sans;
+            font-family: @gills;
             line-height: 60px;
             text-transform: uppercase;
 
@@ -437,5 +441,79 @@ footer {
     button {
         margin-bottom: 10px;
         padding: 5px;
+    }
+}
+
+/* Page: Login */
+.page-login {
+    background-image: url("../imgs/bg-login.png");
+    background-repeat: no-repeat;
+    .disclaimer {
+        display: none;
+    }
+}
+#page-login {
+    display: table;
+    padding: 2em 0;
+    /* Hacky way of making left+right the same height */
+    & > .column {
+        float: none;
+        display: table-cell;
+        padding: 4px;
+        &.spacer {
+            width: 18px;
+            padding: 0;
+            background-position: -348px 20px;
+        }
+    }
+    h2 {
+        color: #fff;
+        font-weight: normal;
+        text-align: center;
+        text-transform: uppercase;
+        padding: 18px;
+    }
+    .login-signin {
+        background-color: @jpp-login-blue;
+        background-position: 20px 20px;
+    }
+    .login-register {
+        background-color: @jpp-login-green;
+        background-position: -366px 20px;
+    }
+    .login-signin, .login-register, .spacer {
+        background-image: url("../imgs/red-symbol.png");
+        background-repeat: no-repeat;
+    }
+    form {
+        margin: 8em auto 6em;
+        overflow: hidden;
+        width: 200px;
+        input[type=text], input[type=password] {
+            .border-box();
+            border: 1px solid #999999;
+            font-size: 0.9em;
+            margin-bottom: 1em;
+            padding: 5px;
+            width: 100%;
+        }
+        input[type=image] {
+            float: right;
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+        p {
+            color: #000;
+            float: right;
+            margin-top: 3em;
+            a {
+                color: @jpp-brightblue;
+                text-decoration: none;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
     }
 }
