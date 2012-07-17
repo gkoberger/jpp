@@ -4,7 +4,7 @@
 @topbar: #fdb302;
 @background-gray: #f0efef;
 
-@jpp-blue: #669999;
+@jpp-blue: #336666;
 @jpp-brightblue: #0066cc;
 @jpp-lightblue: #3399ff;
 @jpp-green: #336666;
@@ -22,7 +22,7 @@
 
 /* Font stacks */
 @sans: "Microsoft Sans Serif", "Helvetica", "Arial", sans-serif;
-@gills: "Gill Sans", Calibri, "Trebuchet MS", sans-serif;
+@gills: "Gill Sans", @sans;
 
 /* General stuff */
 body {
@@ -528,6 +528,7 @@ footer {
 }
 
 #page-register {
+    padding: 2em 0;
     .login-register {
         background-color: @jpp-login-green;
         background-image: url("../imgs/red-symbol.png");
