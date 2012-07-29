@@ -1,0 +1,77 @@
+<div id="page-profile">
+  <div class="column first unitx3">
+    <h4 class="light">My Progress</h4>
+    <img src="imgs/graph.png">
+    <div class="printqr">
+      <a href="#">
+        PRINT<br>
+        your playPass
+      </a>
+      <img src="imgs/tmp/qr.png" class="qrcode">
+    </div>
+  </div>
+  </div>
+  <div class="column unitx5 user-profile-edit">
+    <form enctype="multipart/form-data" method="POST" action="">
+      <h3>Edit Profile</h3>
+      <section>
+        <input type="text" name="title" class="full" id="title">
+        <label class="label" for="title">username</label>
+        <div class="words">
+          <input type="text" name="word1" id="word1">
+          <input type="text" name="word2">
+          <input type="text" name="word3">
+          <input type="text" name="word4">
+          <input type="text" name="word5">
+          <input type="text" name="word6">
+        </div>
+        <label class="label" for="word1">six word bio</label>
+
+        <div class="column unitx1 first">
+          <img src="imgs/tmp/weez.png" alt="NAME">
+        </div>
+        <div class="column width2">
+          <div class="upload">
+            <input type="file" name="avatar" id="avatar">
+          </div>
+          <label class="label" for="avatar">profile picture</label>
+
+          <textarea name="bio" class="bio" id="bio"></textarea>
+          <label class="label" for="bio">about</label>
+        </div>
+      </section>
+
+      <h3>Privacy Settings</h3>
+      <section>
+        <p>These settings define who can see your profile and achievements. Only people on your friends list can see your real name.</p>
+        <ul>
+          <li><input type="radio" name="privacy" value="1" id="privacy_public" checked> <label for="privacy_public">Public - Everyone can see it</label></li>
+          <li><input type="radio" name="privacy" value="2" id="privacy_jpp"> <label for="privacy_jpp">JPP Only</label></li>
+          <li><input type="radio" name="privacy" value="3" id="privacy_friends"> <label for="privacy_friends">Friends Only</label></li>
+        </ul>
+      </section>
+
+      <h3>Communication Settings</h3>
+      <section>
+        <p>We send out an email newsletter every two weeks with information about new achievements and features. You can opt out below, but you'll make Weez sad!  We also send out very occasional email notices when something big's about to happen (like a flash mob performance), and you can opt out of those, too. All active players will receive occasional system-wide communications about things like system downtime.</p>
+        <ul>
+          <li>
+            <input type="checkbox" name="email_newsletter" value="1" id="email_newsletter" checked>
+            <label for="email_newsletter">Send me the newsletter</label>
+          </li>
+          <li>
+            <input type="checkbox" name="email_announcements" value="1" id="email_announcements">
+            <label for="email_announcements">Send me very occasional announcements</label>
+          </li>
+        </ul>
+        <input type="image" src="imgs/submit-green.png" class="submit" value="Submit">
+      </section>
+    </form>
+
+    <a href="" class="leave">Leave the game</a>
+    <div id="leave-options">
+      <p>Here's a little message begging people to stay :) <!-- CHANGE THIS COPY! --></p>
+      <p><a href="#">Leave the game</a></p>
+    </div>
+  </div>
+</div>

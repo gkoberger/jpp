@@ -12,6 +12,7 @@
 @jpp-yellow: #F2DE92;
 @jpp-orange: #cc9933;
 @jpp-brown: #663300;
+@jpp-rusty: #663333;
 
 @jpp-logo-red: #cc3333;
 @jpp-logo-blue: #006699;
@@ -20,9 +21,14 @@
 @jpp-login-blue: #3fa9f5;
 @jpp-login-green: #8db836;
 
+@jpp-stats-orange: #ff931e;
+@jpp-stats-blue: #006699;
+@jpp-stats-green: #99cc33;
+
 /* Font stacks */
 @sans: "Microsoft Sans Serif", "Helvetica", "Arial", sans-serif;
 @gills: "Gill Sans", @sans;
+@classic: "Helvetica", "Arial", @sans;
 
 /* General stuff */
 body {
@@ -62,6 +68,15 @@ h3 {
     font-size: 20px;
 }
 
+h4 {
+    &.light {
+        color: @jpp-lime;
+        font-weight: normal;
+        text-transform: uppercase;
+        margin: 5px 18px;
+    }
+}
+
 p {
     margin-top: 0;
     font-size: 0.8em;
@@ -73,6 +88,14 @@ p {
     color: @jpp-green;
     font-size: 11px;
     text-align: right;
+}
+
+.ignore-ws {
+    font-size: 0; // This will come back to haunt me.
+}
+
+.clear {
+    clear: both;
 }
 
 .controls {
@@ -95,6 +118,57 @@ p {
     }
     .jpp {
         display: inline-block;
+    }
+}
+
+/* Reusable patterns */
+.achievements, .quests {
+    max-height: 330px;
+    overflow: auto;
+}
+.achievement {
+    margin-top: 18px;
+    > img {
+        float: left;
+    }
+    > div {
+        float: left;
+        margin-left: 35px;
+        width: 342px;
+    }
+    .subtitle {
+        color: @note-gray;
+    }
+}
+.achievement-small {
+    display: inline-block;
+    width: 109px;
+    margin-right: 17px;
+    color: @dark-gray;
+    font-size: 11px;
+    text-decoration: none;
+    margin-top: 17px;
+    vertical-align: top;
+    text-align: center;
+    img {
+        width: 90px;
+    }
+    &:hover {
+        opacity: 0.8;
+        color: @dark-gray;
+    }
+    strong {
+        color: @jpp-login-blue;
+        font-size: 12px;
+        font-weight: normal;
+        display: block;
+    }
+}
+.quests {
+    .achievement-small {
+        strong {
+            color: #9900cc;
+        }
     }
 }
 
@@ -224,6 +298,35 @@ header {
         padding: 0 10px;
         margin: 5px 0;
     }
+    .logged-in {
+        display: block;
+        padding: 0 10px;
+        margin: 0;
+        float: right;
+        height: 26px;
+        line-height: 26px;
+        color: #fff;
+        a {
+            color: #FFFFFF;
+            display: inline-block;
+            padding: 5px 0 5px 10px;
+            text-transform: none;
+            &.yougotmail {
+                background-image: url('../imgs/envelope.png');
+                background-repeat: no-repeat;
+                background-position: top right;
+                padding-right: 35px;
+            }
+            &.logout {
+                text-transform: uppercase;
+                font-size: 0.8em;
+            }
+            color: #fff;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
 }
 
 /* Content area */
@@ -343,19 +446,6 @@ footer {
 
     #achievements {
         overflow: hidden;
-        .achievement {
-            > img {
-                float: left;
-            }
-            > div {
-                float: left;
-                margin-left: 35px;
-                width: 370px;
-            }
-            .subtitle {
-                color: @note-gray;
-            }
-        }
     }
 }
 
@@ -579,5 +669,345 @@ footer {
                 opacity: 0.8;
             }
         }
+    }
+}
+
+/* Page: User Profile */
+.user-profile {
+    margin-top: 4em;
+    h2 {
+        font-size: 30px;
+        color: @dark-gray;
+    }
+    h3 {
+        font-size: 24px;
+        color: @jpp-blue;
+        margin-bottom: 15px;
+    }
+    .is_friend {
+        text-align: right;
+        color: @dark-gray;
+        font-size: 0.7em;
+        a {
+            color: red;
+            display: block;
+            text-decoration: none;
+        }
+    }
+    .edit-profile {
+        display: block;
+        color: @jpp-logo-blue;
+        text-decoration: none;
+        text-transform: uppercase;
+        text-align: right;
+        font-size: 0.7em;
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+    .profile-bio {
+        margin-bottom: 2em;
+    }
+}
+
+table.stats {
+    width: 100%;
+    th {
+        width: 33%;
+        color: @medium-gray;
+        font-weight: normal;
+        font-size: 18px;
+        text-align: left;
+        font-family: @gills;
+        strong {
+            display: block;
+            font-weight: normal;
+            line-height: 0.9em;
+        }
+    }
+    td {
+        font-size: 60px;
+        font-weight: bold;
+        font-family: @classic;
+        text-align: center;
+        &:nth-child(1) { color: @jpp-stats-orange; }
+        &:nth-child(2) { color: @jpp-stats-blue; }
+        &:nth-child(3) { color: @jpp-stats-green; }
+    }
+}
+
+#compare {
+    background-color: @jpp-login-blue;
+    clear: both;
+    color: #FFFFFF;
+    float: left;
+    margin-left: -36px;
+    margin-top: 2em;
+    padding: 5px 60px 5px 54px;
+    text-transform: uppercase;
+    position: relative;
+    & + #my-achievements {
+        margin-top: 0;
+        h3 {
+            padding-left: 54px;
+        }
+    }
+    &:before {
+        background-position: -1px 0;
+        background-image: url("../imgs/logo.png");
+        content: " ";
+        display: block;
+        height: 36px;
+        left: 0;
+        position: absolute;
+        top: 15px;
+        width: 46px;
+    }
+}
+
+#my-achievements {
+    // This is naughty...
+    margin-left: -35px;
+    width: 1060px;
+
+    border-top: 6px solid @jpp-lime;
+    clear: both;
+    float: left;
+    margin-top: 2em;
+    display: table;
+    h3, a {
+        display: table-cell;
+    }
+    h3 {
+        font-size: 24px;
+        background-color: @jpp-login-blue;
+        padding: 5px 36px;
+        color: #000;
+        border-bottom: 6px solid @background-gray;
+        width: 40%;
+    }
+    a {
+        width: 20%;
+        border-bottom: 6px solid @background-gray;
+        border-left: 6px solid @background-gray;
+        background-color: @jpp-login-green;
+        color: @jpp-rusty;
+        font-size: 14px;
+        padding: 0;
+        text-align: center;
+        text-decoration: none;
+        vertical-align: middle;
+        &.on {
+            background-color: #fff;
+            border-bottom: 5px solid #fff;
+            &:hover {
+                background-color: @background-gray;
+                border-bottom-color: @background-gray;
+            }
+        }
+        &:hover {
+            background-color: darken(@jpp-login-green, 10%);
+        }
+    }
+}
+
+#my-achievements-all {
+    & > div {
+        display: none;
+        &:first-child {
+            display: block;
+        }
+    }
+    #my-achievements-tracking {
+        overflow: hidden;
+        max-height: none;
+        ul {
+            margin: 18px 0 0;
+            padding: 0;
+            li {
+                .border-box;
+                background-image: url("../imgs/checks.png");
+                background-repeat: no-repeat;
+                display: inline-block;
+                height: 25px;
+                padding: 6px 0 0 45px;
+                width: 480px;
+                background-position: 15px 5px;
+                font-size: 0.9em;
+                a {
+                    color: @jpp-login-blue;
+                    text-decoration: none;
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+                &.on {
+                    background-position: 15px -25px;
+                }
+            }
+        }
+    }
+    .quest-count {
+        padding: 40px 0;
+        text-align: center;
+        color: @note-gray;
+        font-weight: normal;
+        strong {
+            font-size: 40px;
+            font-family: @classic;
+        }
+    }
+}
+
+/* Page: Edit User */
+.user-profile-edit {
+    margin-top: 4em;
+    h3 {
+        width: 100%;
+        .border-box;
+        float: left;
+        background-color: @jpp-login-blue;
+        color: #FFFFFF;
+        font-size: 0.8em;
+        padding: 5px 20px;
+        text-transform: uppercase;
+        margin-bottom: 1em;
+        margin-top: 2em;
+        &:first-child {
+            margin-top: 0;
+        }
+        & + section {
+            clear: both;
+        }
+    }
+    input {
+        .border-box;
+        padding: 7px;
+        &.full {
+            font-size: 24px;
+            width: 100%;
+        }
+    }
+    label.label {
+        width: 100%;
+        text-align: right;
+        color: @note-gray;
+        display: block;
+        padding-top: 3px;
+        font-size: 0.9em;
+        clear: both;
+        margin-bottom: 1em;
+    }
+    p {
+        margin-left: 3em;
+        color: @note-gray;
+    }
+    .words {
+        input {
+            font-size: 12px;
+            text-align: center;
+            display: inline-block;
+            margin-left: 10px;
+            width: 90px;
+            &:first-child {
+                margin-left: 0;
+            }
+        }
+    }
+    .bio {
+        height: 80px;
+        padding: 7px;
+        width: 100%;
+        .border-box;
+    }
+    .upload {
+        border: 1px dotted @note-gray;
+        padding: 10px;
+    }
+    ul {
+        list-style: none;
+        margin: 0 0 0 4em;
+        padding: 0;
+        li {
+            padding: 2px;
+            label {
+                color: @note-gray;
+                font-size: 0.9em;
+                cursor: pointer;
+                padding-left: 6px;
+                &:hover {
+                    color: #000;
+                }
+            }
+        }
+    }
+    .submit {
+        float: right;
+        &:hover {
+            opacity: 0.9;
+        }
+    }
+    .leave {
+        background-color: @jpp-orange;
+        color: #FFFFFF;
+        font-size: 0.8em;
+        padding: 5px 20px;
+        text-transform: uppercase;
+        margin-bottom: 1em;
+        margin-top: 2em;
+        display: block;
+        width: 100%;
+        .border-box;
+        clear: both;
+        float: left;
+        text-decoration: none;
+        position: relative;
+        &:hover {
+            opacity: 0.9;
+        }
+        &:before {
+            border-bottom: 5px solid transparent;
+            border-left: 5px solid #FFFFFF;
+            border-top: 5px solid transparent;
+            content: " ";
+            height: 0;
+            left: 8px;
+            position: absolute;
+            top: 8px;
+            width: 0;
+            .transition(all 0.4s ease-out);
+        }
+        &.open:before {
+            .transform(rotate(90deg));
+        }
+    }
+    #leave-options {
+        clear: both;
+        display: none;
+    }
+}
+
+.printqr {
+    padding-top: 1em;
+    text-align: right;
+    a {
+        display: inline-block;
+        color: @jpp-login-blue;
+        text-decoration: none;
+        vertical-align: top;
+        margin: 2em 0.5em 0;
+        font-size: 0.9em;
+        background-image: url(../imgs/print.png);
+        background-position: right bottom;
+        background-repeat: no-repeat;
+        padding-bottom: 24px;
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+    .qrcode {
+        border: 1px solid @note-gray;
+        padding: 20px;
+        display: inline-block;
     }
 }
