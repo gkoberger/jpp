@@ -1,7 +1,7 @@
 [{
     "Achieved":false,
     "Description":"This is a test achievement!",
-    "Icon":"/imgs/achievement-1.png",
+    "Icon":"imgs/achievement-1.png",
     "IsRetired":false,
     "Name":"TestAchievement",
     "PointsExplore":1,
@@ -12,7 +12,7 @@
 {
     "Achieved":false,
     "Description":"This is another test achievement",
-    "Icon":"/imgs/achievement-1.png",
+    "Icon":"imgs/achievement-1.png",
     "IsRetired":false,
     "Name":"AnotherTestzzz",
     "PointsExplore":0,
