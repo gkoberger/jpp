@@ -1,0 +1,22 @@
+[{
+    "Achieved":false,
+    "Description":"This is a test achievement!",
+    "Icon":"/imgs/achievement-1.png",
+    "IsRetired":false,
+    "Name":"TestAchievement",
+    "PointsExplore":1,
+    "PointsLearn":1,
+    "PointsMake":2,
+    "PointsSocial":0
+},
+{
+    "Achieved":false,
+    "Description":"This is another test achievement",
+    "Icon":"/imgs/achievement-1.png",
+    "IsRetired":false,
+    "Name":"AnotherTestzzz",
+    "PointsExplore":0,
+    "PointsLearn":0,
+    "PointsMake":0,
+    "PointsSocial":4
+}]

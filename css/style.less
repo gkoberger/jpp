@@ -122,6 +122,9 @@ p, ul {
 }
 
 /* Reusable patterns */
+.icon {
+    width: 100%;
+}
 .achievements, .quests {
     max-height: 330px;
     overflow: auto;
@@ -168,6 +171,62 @@ p, ul {
     .achievement-small {
         strong {
             color: #9900cc;
+        }
+    }
+}
+.loading:before {
+    background-color: red;
+    background-image: url("../imgs/loading.gif");
+    content: " ";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center 30px;
+    background-color: rgba(255,255,255,0.8);
+}
+.loading {
+    position: relative;
+    min-height: 200px;
+}
+
+.tinyquad {
+    background-image: url(../imgs/tinyquad.png);
+    background-repeat: no-repeat;
+    background-position: relative;
+    height: 54px;
+    position: relative;
+    width: 54px;
+    float: right;
+    div {
+        .border-box();
+        color: #FFFFFF;
+        height: 27px;
+        width: 27px;
+        position: absolute;
+        &.quad-explore {
+            padding: 1px 4px 0 7px;
+            top: 27px;
+            left: 27px;
+        }
+        &.quad-social {
+            padding: 1px 4px 0;
+            top: 27px;
+            left: 0;
+            text-align: right;
+        }
+        &.quad-learn {
+            padding: 5px 4px 0 7px;
+            top: 0;
+            left: 27px;
+        }
+        &.quad-make {
+            padding: 5px 4px 0;
+            text-align: right;
+            top: 0;
+            left: 0;
         }
     }
 }
@@ -775,10 +834,10 @@ table.stats {
     float: left;
     margin-top: 2em;
     display: table;
-    h3, a {
+    h3, a, div {
         display: table-cell;
     }
-    h3 {
+    h3, div {
         font-size: 24px;
         background-color: @jpp-login-blue;
         padding: 5px 36px;
@@ -1010,4 +1069,65 @@ table.stats {
         padding: 20px;
         display: inline-block;
     }
+}
+
+/* Page: Achievements */
+#page.page-achievements {
+    padding-top: 2px;
+    padding-bottom: 0;
+    background-image: url(../imgs/bg-achievements.png);
+    background-position: center 11px;
+    background-repeat: no-repeat;
+}
+#page-achievements {
+    #results {
+        background-color: #fff;
+        padding-bottom: 4em;
+    }
+    #my-achievements {
+        margin-top: 0;
+        > div {
+            background-color: transparent;
+        }
+        .on {
+            border-bottom: 5px solid @background-gray;
+        }
+    }
+    .selector {
+        float: right;
+        margin-top: 2px;
+        display: none;
+        &.on {
+            display: block;
+        }
+    }
+    .person {
+        margin-top: 2em;
+        overflow: hidden;
+    }
+}
+#search-bar {
+    margin-left: -35px;
+    width: 1060px;
+    background-color: @jpp-login-blue;
+    clear: both;
+    padding: 5px 35px;
+    .border-box;
+    input {
+        padding: 7px 10px;
+        background-color: #fff;
+        .border-radius(10px);
+        border: 0 none;
+        font-size: 0.8em;
+        .transition(width 0.3s ease-out);
+        width: 250px;
+        &:active, &:focus {
+            width: 300px;
+        }
+    }
+}
+#no-results {
+    display: block;
+    padding: 2em;
+    text-align: center;
 }

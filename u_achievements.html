@@ -1,0 +1,38 @@
+<div id="page-achievements">
+  <nav id="my-achievements">
+    <div class="clear-box">&nbsp;</div>
+    <a href="#my-achievements-achievements" class="on">achievements</a>
+    <a href="#my-achievements-quest">quests</a>
+  </nav>
+  <div id="search-bar">
+    <input type="text" placeholder="SEARCH" id="filter">
+
+    <!-- WHEN IMPLEMENTING: Change the data-url!!! -->
+    <select id="my-achievements-achievements-selector" class="selector on" data-url="/tmp/achievement.json">
+      <option value="all">All</option>
+      <option value="create" data-filter="make" data-value="1">Create</option>
+      <option value="learn" data-filter="learn" data-value="1">Learn</option>
+      <option value="socialize" data-filter="social" data-value="1">Socialize</option>
+      <option value="explore" data-filter="explore" data-value="1">Explore</option>
+      <option value="attained" data-filter="achieved" data-value="1">Attained</option>
+      <option value="not-attained" data-filter="achieved" data-value="0">Not Attained</option>
+    </select>
+
+    <!-- WHEN IMPLEMENTING: Change the data-url!!! -->
+    <select id="my-achievements-quest-selector" class="selector" data-url="/tmp/quest.json">
+      <option value="all">All</option>
+      <option value="tracking" data-filter="tracking" data-value="1">Currently Tracking</option>
+      <option value="nottracking" data-filter="tracking" data-value="0">Not Tracking</option>
+      <option value="completed" data-filter="completed" data-value="1">Currently Completed</option>
+      <option value="notcompleted" data-filter="completed" data-value="0">Not Completed</option>
+    </select>
+  </div>
+
+  <div class="column unitx1 first">&nbsp;</div>
+  <div class="column width3" id="results">
+    <div id="no-results">
+      <strong>No results matched your criteria</strong>
+      <p>Try changing the filters above to see more results.</p>
+    </div>
+  </div>
+</div>
