@@ -3,8 +3,41 @@
     &nbsp;
   </div>
   <div class="column unitx3">
-    <div class="boxy">Facebook plugin goes here</div>
-    <div class="boxy">Twitter plugin goes here</div>
+    <div class="boxy">
+      <iframe
+        src="//www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2FJustPressPlayRIT&amp;width=326&amp;height=558&amp;colorscheme=light&amp;show_faces=true&amp;border_color&amp;stream=true&amp;header=false&amp;appId=255186347917634"
+        scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:292px; height:558px;" allowTransparency="true"></iframe>
+    </div>
+    <div class="boxy">
+      <script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
+      <script>
+        new TWTR.Widget({
+          version: 2,
+          type: 'profile',
+          rpp: 4,
+          interval: 30000,
+          width: 326,
+          height: 300,
+          theme: {
+          shell: {
+          background: '#f0f0f0',
+          color: '#306131'
+          },
+          tweets: {
+          background: '#ffffff',
+          color: '#000000',
+          links: '#689e51'
+          }
+          },
+          features: {
+          scrollbar: false,
+          loop: false,
+          live: false,
+          behavior: 'all'
+                    }
+          }).render().setUser('ritplay').start();
+          </script>
+    </div>
   </div>
   <div class="column unitx3">
     <div class="boxy blog">
@@ -16,4 +49,5 @@
       <p>Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows. Some pilots get picked and become television programs. Some don't, become nothing. She starred in one of the ones that became nothing.</p>
     </div>
   </div>
+  <div id="fb-root"></div>
 </div>

@@ -33,10 +33,9 @@ function loadFromHash() {
 loadFromHash();
 
 function loadURL(url) {
-    $.get(url, function(data){
-        var $d = $(data);
+    $('#content').load(url, function(data){
+        var $d = $(this).children('div');
         var pagename = $d.attr('id').replace(/#/, '');
-        $('#content').html($d);
         window.location.hash = url;
         $('#page').attr('class', 'center ' + pagename);
     });
