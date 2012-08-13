@@ -1131,3 +1131,42 @@ table.stats {
     padding: 2em;
     text-align: center;
 }
+
+/* Individual Achievements */
+#page.page-achievement {
+    padding-top: 2px;
+    padding-bottom: 0;
+    background-image: url(../imgs/bg-achievement.png);
+    background-position: center 0;
+    background-repeat: no-repeat;
+}
+#page-achievement {
+    #my-achievements {
+        margin-top: 0;
+    }
+    #achievement {
+        .border-box;
+        background-color: #FFFFFF;
+        margin: 25px auto 0;
+        overflow: hidden;
+        padding: 70px 18px 0;
+        position: relative;
+        width: 774px;
+        h3 {
+            color: @jpp-green;
+            font-size: 22px;
+        }
+        h2 {
+            color: #000;
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+        a {
+            color: @jpp-logo-blue;
+            text-decoration: none;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
