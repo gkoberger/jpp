@@ -1,5 +1,6 @@
 body {
   background-color: #f0efef;
+  min-width: 1060px;
   font-family: "Microsoft Sans Serif", "Helvetica", "Arial", sans-serif;
 }
 #content {
