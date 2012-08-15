@@ -42,8 +42,8 @@ $(function() {
             data[option.data('filter')] = option.data('value') ? true : false; // Convert 1/0 to true/false
         }
 
-        $.get(url, data, function(d) {
-            $('#results .person').remove()
+        $.getJSON(url, data, function(d) {
+            $('#results .person').remove();
             $('#results').removeClass('loading');
             $.each(d, function(k, v) {
                 var $p = $('<div>', {'class': 'person',
