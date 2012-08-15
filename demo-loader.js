@@ -27,7 +27,7 @@ $(function() {
         var current_url = location.hash.replace('#', '');
         if(!current_url) {
             if(typeof user == "undefined") user = false;
-            current_url = user ? 'main.html' : 'main.html';
+            current_url = user ? 'u_main.html' : 'main.html';
         }
         loadURL(current_url);
     }

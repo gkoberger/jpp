@@ -11,12 +11,13 @@
 @jpp-lime: #c9e394;
 @jpp-yellow: #F2DE92;
 @jpp-orange: #cc9933;
+@jpp-logo-blue: #006699;
+@jpp-logo-green: #99cc33;
+@jpp-logo-orange: #ff9933;
 @jpp-brown: #663300;
 @jpp-rusty: #663333;
 
 @jpp-logo-red: #cc3333;
-@jpp-logo-blue: #006699;
-@jpp-logo-green: #99cc33;
 
 @jpp-login-blue: #3fa9f5;
 @jpp-login-green: #8db836;
@@ -110,15 +111,13 @@ p, ul {
         height: 10px;
         width: 10px;
         margin: 10px;
-        &.spacey {
-            margin: 10px 28px;
-        }
         &:hover {
             background-color: darken(@jpp-yellow, 10%);
         }
     }
     .jpp {
         display: inline-block;
+        margin: 0 20px;
     }
 }
 
@@ -132,6 +131,7 @@ p, ul {
 }
 .achievement {
     margin-top: 18px;
+    overflow: auto;
     > img {
         float: left;
     }
@@ -193,6 +193,13 @@ p, ul {
     min-height: 200px;
 }
 
+.imager {
+    clear: both;
+    img, p {
+        float: left;
+    }
+}
+
 .tinyquad {
     background-image: url(../imgs/tinyquad.png);
     background-repeat: no-repeat;
@@ -229,6 +236,16 @@ p, ul {
             top: 0;
             left: 0;
         }
+    }
+}
+
+#slider {
+    overflow: hidden;
+    position: relative;
+    .wrapper {
+        position: absolute;
+        left: 0;
+        .transition(all 1s ease-out);
     }
 }
 
@@ -435,22 +452,22 @@ footer {
     background-repeat: no-repeat;
     min-height: 780px;
 }
-#page-main  {
-    .logo-big {
-        padding-top: 15px;
-        span {
-            display: block;
-            text-align: right;
-            font-size: 70px;
-            font-family: @gills;
-            line-height: 60px;
-            text-transform: uppercase;
+.logo-big {
+    padding-top: 15px;
+    span {
+        display: block;
+        text-align: right;
+        font-size: 70px;
+        font-family: @gills;
+        line-height: 60px;
+        text-transform: uppercase;
 
-            &.c1 { color: @jpp-logo-red; }
-            &.c2 { color: @jpp-logo-blue; }
-            &.c3 { color: @jpp-logo-green; }
-        }
+        &.c1 { color: @jpp-logo-red; }
+        &.c2 { color: @jpp-logo-blue; }
+        &.c3 { color: @jpp-logo-green; }
     }
+}
+#page-main  {
 
     .details {
         padding: 1em;
@@ -1167,6 +1184,126 @@ table.stats {
             text-decoration: none;
             &:hover {
                 text-decoration: underline;
+            }
+        }
+    }
+}
+
+/* Main user page */
+#page-user-main {
+    h2 {
+        font-weight: normal;
+        font-size: 35px;
+        span:nth-child(1) {
+           color: @jpp-lightblue;
+        }
+        span:nth-child(2) {
+           color: @jpp-logo-red;
+        }
+        span:nth-child(3) {
+           color: @jpp-logo-green;
+        }
+        span:nth-child(4) {
+            color: @jpp-logo-orange;
+        }
+        span:nth-child(5) {
+            color: @note-gray;
+        }
+    }
+    .main {
+        padding: 10px 0 0 20px;
+        .border-box();
+    }
+    #gray-slider {
+        background-color: #F0EFEF;
+        .box-shadow(3px 3px 3px #BBBBBB);
+        margin-top: 10px;
+        padding: 20px;
+        width: 500px;
+    }
+
+    #slider {
+        height: 105px;
+        width: 500px;
+        margin-top: 1em;
+        .achievement {
+            margin: 0;
+            img {
+                width: 105px;
+            }
+        }
+    }
+    .main-stats {
+        clear: both;
+        margin: 0 0 0 -36px;
+        padding: 2em 0 0;
+        .first {
+            .border-box;
+            background-image: url("http://localhost:8001/css/../imgs/main-green.png");
+            background-position: right top;
+            color: #FFFFFF;
+            font-size: 27px;
+            font-weight: normal;
+            height: 102px;
+            margin-right: 26px;
+            padding: 33px;
+            text-transform: uppercase;
+            width: 600px;
+        }
+        table.stats {
+            width: 400px;
+
+        }
+    }
+
+    .feed {
+        width: 1061px;
+        margin-top: 2em;
+        th {
+            border-top: 6px solid @jpp-lime;
+            width: 33%;
+            text-align: left;
+            color: #fff;
+            background-color: @jpp-login-blue;
+            padding: 8px 25px;
+            font-size: 20px;
+            font-family: @gills;
+            border-bottom: 6px solid @background-gray;
+            border-right: 6px solid @background-gray;
+            font-weight: normal;
+            &:nth-child(2) {
+                background-color: @jpp-login-green;
+            }
+            &:nth-child(3) {
+                border-right: 0 none;
+            }
+        }
+        td {
+            border-right: 6px solid @background-gray;
+            &:nth-child(3) {
+                border-right: 0 none;
+            }
+            ul {
+                max-height: 300px;
+                overflow: auto;
+                list-style: none;
+                padding: 18px 0 0;
+                margin: 0;
+                li {
+                    overflow: hidden;
+                    padding: 0 0 18px 18px;
+                }
+                .imager {
+                    img {
+                        width: 55px;
+                    }
+                    p {
+                        width: 100px;
+                        font-size: 13px;
+                        margin-left: 1em;
+                        width: 240px;
+                    }
+                }
             }
         }
     }

@@ -113,10 +113,82 @@ function filter() {
     $('#no-results').toggle(!found);
 }
 
+function createSlider() {
+    var $slider = $('#slider');
+    var $wrapper = $slider.find('.wrapper');
+    var w = $slider.width();
+    var h = $slider.height();
+    var left = 0;
+
+    if(!$wrapper) return;
+
+    $wrapper.width(w * $wrapper.children().length);
+
+    $wrapper.children().each(function() {
+        $(this).css({'width': w,
+                    'height': h,
+                    'float': 'left'});
+    });
+
+    $slider.bind('next', function() {
+        left = left - w;
+        if(left * -1 >= $wrapper.width()) {
+            left = 0;
+        }
+        $wrapper.css({'left': left});
+    });
+
+    $slider.bind('goto', function(e, i) {
+        left = i * w * -1;
+        $wrapper.css({'left': left});
+    });
+
+    $slider.bind('prev', function() {
+        left = left + w;
+        if(left > 0) {
+            left = ($wrapper.children().length - 1) * w * -1;
+        }
+        $wrapper.css({'left': left});
+    });
+
+    var $controls = $('<div>', {'class': 'controls'});
+    var $left = $('<a>', {'href': '#', 'class': 'jpp rotate small'});
+    $controls.append($left);
+    $left.click(function(e) {
+        e.preventDefault();
+        $('#slider').trigger('prev');
+    });
+
+    var i = 0;
+    $wrapper.children().each(function() {
+        var $a = $('<a>', {'href': '#', 'class': 'pacman-dot'});
+        var num = i;
+        $controls.append($a);
+        $a.click(function(e) {
+            e.preventDefault();
+            $('#slider').trigger('goto', [num]);
+        });
+        i++;
+    });
+
+    var $right = $('<a>', {'href': '#', 'class': 'jpp small'});
+    $controls.append($right);
+    $right.click(function(e) {
+        e.preventDefault();
+        $('#slider').trigger('next');
+    });
+
+    $slider.after($controls);
+}
+
 /* Stuff in here will be called on page onload */
 function onloader() {
     var $selector = $('.selector.on');
     if($selector.length) {
         $selector.trigger('change');
+    }
+
+    if($('#slider').length) {
+        createSlider();
     }
 }
