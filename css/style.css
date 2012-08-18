@@ -73,14 +73,12 @@ ul {
   width: 10px;
   margin: 10px;
 }
-.controls .pacman-dot.spacey {
-  margin: 10px 28px;
-}
 .controls .pacman-dot:hover {
   background-color: #edd064;
 }
 .controls .jpp {
   display: inline-block;
+  margin: 0 20px;
 }
 /* Reusable patterns */
 .icon {
@@ -93,6 +91,7 @@ ul {
 }
 .achievement {
   margin-top: 18px;
+  overflow: auto;
 }
 .achievement > img {
   float: left;
@@ -149,6 +148,13 @@ ul {
   position: relative;
   min-height: 200px;
 }
+.imager {
+  clear: both;
+}
+.imager img,
+.imager p {
+  float: left;
+}
 .tinyquad {
   background-image: url(../imgs/tinyquad.png);
   background-repeat: no-repeat;
@@ -188,6 +194,17 @@ ul {
   text-align: right;
   top: 0;
   left: 0;
+}
+#slider {
+  overflow: hidden;
+  position: relative;
+}
+#slider .wrapper {
+  position: absolute;
+  left: 0;
+  -moz-transition: all 1s ease-out;
+  -webkit-transition: all 1s ease-out;
+  transition: all 1s ease-out;
 }
 /* JPP Logo in CSS */
 .jpp {
@@ -386,10 +403,10 @@ footer a.ms {
   background-repeat: no-repeat;
   min-height: 780px;
 }
-#page-main .logo-big {
+.logo-big {
   padding-top: 15px;
 }
-#page-main .logo-big span {
+.logo-big span {
   display: block;
   text-align: right;
   font-size: 70px;
@@ -397,13 +414,13 @@ footer a.ms {
   line-height: 60px;
   text-transform: uppercase;
 }
-#page-main .logo-big span.c1 {
+.logo-big span.c1 {
   color: #cc3333;
 }
-#page-main .logo-big span.c2 {
+.logo-big span.c2 {
   color: #006699;
 }
-#page-main .logo-big span.c3 {
+.logo-big span.c3 {
   color: #99cc33;
 }
 #page-main .details {
@@ -1152,4 +1169,122 @@ table.stats td:nth-child(3) {
 }
 #page-achievement #achievement a:hover {
   text-decoration: underline;
+}
+/* Main user page */
+#page-user-main h2 {
+  font-weight: normal;
+  font-size: 35px;
+}
+#page-user-main h2 span:nth-child(1) {
+  color: #3399ff;
+}
+#page-user-main h2 span:nth-child(2) {
+  color: #cc3333;
+}
+#page-user-main h2 span:nth-child(3) {
+  color: #99cc33;
+}
+#page-user-main h2 span:nth-child(4) {
+  color: #ff9933;
+}
+#page-user-main h2 span:nth-child(5) {
+  color: #999999;
+}
+#page-user-main .main {
+  padding: 10px 0 0 20px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+#page-user-main #gray-slider {
+  background-color: #F0EFEF;
+  box-shadow: 3px 3px 3px #bbbbbb;
+  -moz-box-shadow: 3px 3px 3px #bbbbbb;
+  -webkit-box-shadow: 3px 3px 3px #bbbbbb;
+  margin-top: 10px;
+  padding: 20px;
+  width: 500px;
+}
+#page-user-main #slider {
+  height: 105px;
+  width: 500px;
+  margin-top: 1em;
+}
+#page-user-main #slider .achievement {
+  margin: 0;
+}
+#page-user-main #slider .achievement img {
+  width: 105px;
+}
+#page-user-main .main-stats {
+  clear: both;
+  margin: 0 0 0 -36px;
+  padding: 2em 0 0;
+}
+#page-user-main .main-stats .first {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background-image: url("http://localhost:8001/css/../imgs/main-green.png");
+  background-position: right top;
+  color: #FFFFFF;
+  font-size: 27px;
+  font-weight: normal;
+  height: 102px;
+  margin-right: 26px;
+  padding: 33px;
+  text-transform: uppercase;
+  width: 600px;
+}
+#page-user-main .main-stats table.stats {
+  width: 400px;
+}
+#page-user-main .feed {
+  width: 1061px;
+  margin-top: 2em;
+}
+#page-user-main .feed th {
+  border-top: 6px solid #c9e394;
+  width: 33%;
+  text-align: left;
+  color: #fff;
+  background-color: #3fa9f5;
+  padding: 8px 25px;
+  font-size: 20px;
+  font-family: "Gill Sans", "Microsoft Sans Serif", "Helvetica", "Arial", sans-serif;
+  border-bottom: 6px solid #f0efef;
+  border-right: 6px solid #f0efef;
+  font-weight: normal;
+}
+#page-user-main .feed th:nth-child(2) {
+  background-color: #8db836;
+}
+#page-user-main .feed th:nth-child(3) {
+  border-right: 0 none;
+}
+#page-user-main .feed td {
+  border-right: 6px solid #f0efef;
+}
+#page-user-main .feed td:nth-child(3) {
+  border-right: 0 none;
+}
+#page-user-main .feed td ul {
+  max-height: 300px;
+  overflow: auto;
+  list-style: none;
+  padding: 18px 0 0;
+  margin: 0;
+}
+#page-user-main .feed td ul li {
+  overflow: hidden;
+  padding: 0 0 18px 18px;
+}
+#page-user-main .feed td ul .imager img {
+  width: 55px;
+}
+#page-user-main .feed td ul .imager p {
+  width: 100px;
+  font-size: 13px;
+  margin-left: 1em;
+  width: 240px;
 }
