@@ -1194,20 +1194,29 @@ table.stats {
     h2 {
         font-weight: normal;
         font-size: 35px;
-        span:nth-child(1) {
-           color: @jpp-lightblue;
-        }
-        span:nth-child(2) {
-           color: @jpp-logo-red;
-        }
-        span:nth-child(3) {
-           color: @jpp-logo-green;
-        }
-        span:nth-child(4) {
-            color: @jpp-logo-orange;
-        }
-        span:nth-child(5) {
-            color: @note-gray;
+        span {
+            display: inline-block;
+            &:nth-child(1) {
+                color: @jpp-lightblue;
+            }
+            &:nth-child(2) {
+                color: @jpp-logo-red;
+            }
+            &:nth-child(3) {
+                color: @jpp-logo-green;
+            }
+            &:nth-child(4) {
+                color: @jpp-logo-orange;
+            }
+            &:nth-child(5) {
+                color: @note-gray;
+                &:first-letter {
+                    color: #CBC4C4;
+                    float: left;
+                    font-size: 1.7em;
+                    line-height: 40px;
+                }
+            }
         }
     }
     .main {

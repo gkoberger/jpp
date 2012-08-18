@@ -1175,6 +1175,9 @@ table.stats td:nth-child(3) {
   font-weight: normal;
   font-size: 35px;
 }
+#page-user-main h2 span {
+  display: inline-block;
+}
 #page-user-main h2 span:nth-child(1) {
   color: #3399ff;
 }
@@ -1189,6 +1192,12 @@ table.stats td:nth-child(3) {
 }
 #page-user-main h2 span:nth-child(5) {
   color: #999999;
+}
+#page-user-main h2 span:nth-child(5):first-letter {
+  color: #CBC4C4;
+  float: left;
+  font-size: 1.7em;
+  line-height: 40px;
 }
 #page-user-main .main {
   padding: 10px 0 0 20px;
