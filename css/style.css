@@ -1068,6 +1068,7 @@ table.stats td:nth-child(3) {
   display: inline-block;
 }
 /* Page: Achievements */
+#page.page-friends,
 #page.page-achievements {
   padding-top: 2px;
   padding-bottom: 0;
@@ -1075,28 +1076,35 @@ table.stats td:nth-child(3) {
   background-position: center 11px;
   background-repeat: no-repeat;
 }
-#page-achievements #results {
+#page-achievements #results,
+#page-friends #results {
   background-color: #fff;
   padding-bottom: 4em;
 }
-#page-achievements #my-achievements {
+#page-achievements #my-achievements,
+#page-friends #my-achievements {
   margin-top: 0;
 }
-#page-achievements #my-achievements > div {
+#page-achievements #my-achievements > div,
+#page-friends #my-achievements > div {
   background-color: transparent;
 }
-#page-achievements #my-achievements .on {
+#page-achievements #my-achievements .on,
+#page-friends #my-achievements .on {
   border-bottom: 5px solid #f0efef;
 }
-#page-achievements .selector {
+#page-achievements .selector,
+#page-friends .selector {
   float: right;
   margin-top: 2px;
   display: none;
 }
-#page-achievements .selector.on {
+#page-achievements .selector.on,
+#page-friends .selector.on {
   display: block;
 }
-#page-achievements .person {
+#page-achievements .person,
+#page-friends .person {
   margin-top: 2em;
   overflow: hidden;
 }
@@ -1296,4 +1304,22 @@ table.stats td:nth-child(3) {
   font-size: 13px;
   margin-left: 1em;
   width: 240px;
+}
+/* Page: Friends */
+#page-friends h3 {
+  color: #336666;
+}
+#page-friends .addFriend {
+  background-image: url(../imgs/addFriend.png);
+  display: inline-block;
+  float: right;
+  height: 31px;
+  text-indent: -90000px;
+  width: 95px;
+}
+#page-friends .addFriend:hover {
+  opacity: 0.8;
+}
+#page-friends .addFriend.on {
+  background-position: 0 -31px;
 }

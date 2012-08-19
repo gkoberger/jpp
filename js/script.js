@@ -80,10 +80,10 @@ $(function() {
 
                 /* Add it to the page */
                 $('#results').append($p);
-
-                /* Re-apply the filters */
-                filter();
             });
+
+            /* Re-apply the filters */
+            filter();
         });
     });
 
@@ -94,10 +94,56 @@ $(function() {
             $selector.addClass('on');
             $selector.trigger('change');
         }
+        if($('#page-friends').length) {
+            updateFriends(type);
+        }
     });
 
     onloader();
 });
+
+function updateFriends(type) {
+    var url = $('#page-friends').data('url');
+    $('#results').addClass('loading');
+
+    var data = {'friend': !!(type == '#my-people-friends')};
+
+    $.getJSON(url, data, function(d) {
+        $('#results .person').remove();
+        $('#results').removeClass('loading');
+        $.each(d, function(k, v) {
+            var $p = $('<div>', {'class': 'person', 'data-text': v.DisplayName});
+
+            /* Add friend button? */
+            var $first = $('<div>', {'class': 'first column unitx1', 'html': '&nbsp;'});
+            $p.append($first);
+
+            if(!v.Friend) {
+                var $a = $('<a>', {'href': '#', 'text': 'Add Friend', 'class': 'addFriend'});
+                $a.one('click', function() {
+                    alert('This is where the add-friend code goes! Talk to Greg about implementing this :)');
+                    $(this).addClass('on');
+                });
+                $first.empty().append($a);
+            }
+
+            var $icon = $('<div>', {'class': 'column unitx1'});
+            $icon.append($('<img>', {'src': v.Photo, 'class': 'icon'}));
+            $p.append($icon);
+
+            var $info = $('<div>', {'class': 'column unitx4'});
+            $info.append($('<h3>', {'text': v.DisplayName}));
+            $info.append($('<p>', {'text': v.SixWordBio}));
+            $p.append($info);
+
+            /* Add it to the page */
+            $('#results').append($p);
+        });
+
+        /* Re-apply the filters */
+        filter();
+    });
+}
 
 function filter() {
     /* This is slow; we need to speed it up. */
@@ -186,6 +232,10 @@ function onloader() {
     var $selector = $('.selector.on');
     if($selector.length) {
         $selector.trigger('change');
+    }
+
+    if($('#page-friends').length) {
+        updateFriends('#my-people-friends');
     }
 
     if($('#slider').length) {

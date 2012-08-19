@@ -1090,6 +1090,7 @@ table.stats {
 }
 
 /* Page: Achievements */
+#page.page-friends,
 #page.page-achievements {
     padding-top: 2px;
     padding-bottom: 0;
@@ -1097,7 +1098,7 @@ table.stats {
     background-position: center 11px;
     background-repeat: no-repeat;
 }
-#page-achievements {
+#page-achievements, #page-friends {
     #results {
         background-color: #fff;
         padding-bottom: 4em;
@@ -1317,3 +1318,26 @@ table.stats {
         }
     }
 }
+
+/* Page: Friends */
+#page-friends {
+    h3 {
+        color: @jpp-blue;
+    }
+
+    .addFriend {
+        background-image: url(../imgs/addFriend.png);
+        display: inline-block;
+        float: right;
+        height: 31px;
+        text-indent: -90000px;
+        width: 95px;
+        &:hover {
+            opacity: 0.8;
+        }
+        &.on {
+            background-position: 0 -31px;
+        }
+    }
+}
+

@@ -1,0 +1,14 @@
+[
+{
+    "DisplayName":"BENJAMIN SNYDER",
+        "Friend":true,
+        "Photo":"imgs/tmp/weez.png",
+        "SixWordBio":"Oh my god I am BATMAN"
+},
+{
+    "DisplayName":"LameSidekick",
+    "Friend":false,
+    "Photo":"imgs/tmp/weez.png",
+    "SixWordBio":""
+}
+]
