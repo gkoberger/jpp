@@ -1323,3 +1323,88 @@ table.stats td:nth-child(3) {
 #page-friends .addFriend.on {
   background-position: 0 -31px;
 }
+/* Page: Inbox */
+.page-inbox {
+  background-image: url(../imgs/bg-inbox.png);
+  background-repeat: no-repeat;
+  background-position: 100px center;
+  min-height: 800px;
+}
+.page-inbox #content {
+  width: 100%;
+}
+#page-inbox {
+  float: right !important;
+}
+#page-inbox .inbox {
+  color: #666666;
+  font-size: 29px;
+  margin-top: 40px;
+}
+#page-inbox .clear {
+  float: right;
+  margin: 0 10px 10px 0;
+  font-size: 12px;
+  color: #999999;
+  text-decoration: none;
+}
+#page-inbox .clear:hover {
+  color: #666666;
+}
+#page-inbox .hider {
+  font-size: 11px;
+}
+#page-inbox .hider span {
+  padding: 0 10px;
+}
+#page-inbox .hider a {
+  text-decoration: none;
+}
+#page-inbox .hider a:hover {
+  text-decoration: underline;
+}
+#page-inbox h2 {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: #3399ff;
+  color: #FFFFFF;
+  font-size: 13px;
+  padding: 7px 0 7px 40px;
+  text-transform: uppercase;
+  margin-top: 40px;
+}
+#page-inbox .achievement {
+  margin-left: 50px;
+}
+#page-inbox .achievement img {
+  width: 107px;
+}
+#page-inbox .achievement > div {
+  width: 420px;
+  padding-top: 10px;
+}
+#page-inbox .buttons {
+  float: right;
+}
+#page-inbox .buttons a {
+  background-image: url("../imgs/inbox-button.png");
+  display: inline-block;
+  height: 31px;
+  margin-left: 5px;
+  text-indent: -90000px;
+}
+#page-inbox .buttons a:hover {
+  opacity: 0.8;
+}
+#page-inbox .buttons .accept {
+  width: 105px;
+}
+#page-inbox .buttons .ignore {
+  background-position: -105px 0;
+  width: 92px;
+}
+#page-inbox .buttons .delete {
+  background-position: -196px 0;
+  width: 94px;
+}

@@ -1341,3 +1341,87 @@ table.stats {
     }
 }
 
+
+/* Page: Inbox */
+.page-inbox  {
+    background-image: url(../imgs/bg-inbox.png);
+    background-repeat: no-repeat;
+    background-position: 100px center;
+    min-height: 800px;
+    #content {
+        width: 100%;
+    }
+}
+#page-inbox {
+    float: right !important;
+    .inbox {
+        color: @medium-gray;
+        font-size: 29px;
+        margin-top: 40px;
+    }
+    .clear {
+        float: right;
+        margin: 0 10px 10px 0;
+        font-size: 12px;
+        color: @note-gray;
+        text-decoration: none;
+        &:hover {
+            color: darken(@note-gray, 20%);
+        }
+    }
+    .hider {
+        font-size: 11px;
+        span {
+            padding: 0 10px;
+        }
+        a {
+            text-decoration: none;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+    h2 {
+        .border-box;
+        background-color: @jpp-lightblue;
+        color: #FFFFFF;
+        font-size: 13px;
+        padding: 7px 0 7px 40px;
+        text-transform: uppercase;
+        margin-top: 40px;
+    }
+    .achievement {
+        margin-left: 50px;
+        img {
+            width: 107px;
+        }
+        > div {
+            width: 420px;
+            padding-top: 10px;
+        }
+    }
+    .buttons {
+        float: right;
+        a {
+            background-image: url("../imgs/inbox-button.png");
+            display: inline-block;
+            height: 31px;
+            margin-left: 5px;
+            text-indent: -90000px;
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+        .accept {
+            width: 105px;
+        }
+        .ignore {
+            background-position: -105px 0;
+            width: 92px;
+        }
+        .delete {
+            background-position: -196px 0;
+            width: 94px;
+        }
+    }
+}
