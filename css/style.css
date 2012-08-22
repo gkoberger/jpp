@@ -483,6 +483,26 @@ footer a.ms {
   width: 577px;
   height: 220px;
 }
+/* Page: About */
+.page-about-more {
+  background-image: url("../imgs/bg-about-more.png");
+  background-position: 20px 20px;
+  background-repeat: no-repeat;
+}
+#page-about-more .row-1 {
+  margin-left: 130px;
+  margin-top: 30px;
+}
+#page-about-more p {
+  line-height: 1.8em;
+  margin-top: 10px;
+}
+#page-about-more h3 {
+  color: #555;
+}
+#page-about-more .row-2 {
+  margin-top: 70px;
+}
 /* Page: News */
 .page-news {
   background-image: url("../imgs/bg-news.png");
