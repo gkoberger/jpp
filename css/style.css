@@ -399,7 +399,7 @@ footer a.ms {
 /* Page: Main */
 .page-main {
   background-image: url("../imgs/bg-main.png");
-  background-position: 10px 300px;
+  background-position: 28px 350px;
   background-repeat: no-repeat;
   min-height: 780px;
 }
@@ -446,7 +446,7 @@ footer a.ms {
 /* Page: About */
 .page-about {
   background-image: url("../imgs/bg-about.png");
-  background-position: 130px 0;
+  background-position: 20px 0;
   background-repeat: no-repeat;
 }
 #page-about .first {
@@ -478,13 +478,20 @@ footer a.ms {
 /* Page: News */
 .page-news {
   background-image: url("../imgs/bg-news.png");
-  background-position: 20px center;
   background-repeat: no-repeat;
+  background-position: right bottom;
+  min-height: 794px;
+}
+.page-news #content {
+  background-image: url('../imgs/bg-news-social.png');
+  background-repeat: no-repeat;
+  background-position: 0px center;
 }
 #page-news .boxy {
   border: 1px solid #cccccc;
   padding: 1em;
   margin-top: 2em;
+  background-color: #fff;
 }
 #page-news .blog {
   padding: 2em;
@@ -493,6 +500,11 @@ footer a.ms {
   margin: 1em 0;
 }
 /* Page: Credits */
+.page-credits {
+  background-image: url("../imgs/bg-credits.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
 #page-credits h2 {
   margin-bottom: 20px;
   font-size: 55px;
@@ -531,15 +543,6 @@ footer a.ms {
 #page-credits .c7 {
   color: #336666;
 }
-#page-credits img {
-  padding: 1em;
-  background-color: #fff;
-  box-shadow: 3px 3px 3px #cccccc;
-  -moz-box-shadow: 3px 3px 3px #cccccc;
-  -webkit-box-shadow: 3px 3px 3px #cccccc;
-  position: relative;
-  left: -1em;
-}
 /* Page: Contact */
 .page-contact {
   background-image: url("../imgs/bg-contact.png");
@@ -547,8 +550,13 @@ footer a.ms {
   background-repeat: no-repeat;
   min-height: 658px;
 }
+#page-contact h2 {
+  text-transform: uppercase;
+  font-size: 48px;
+  padding-top: 35px;
+}
 #page-contact .contact {
-  padding-top: 2em;
+  padding-top: 5em;
 }
 #page-contact input {
   margin-bottom: 10px;
@@ -599,17 +607,9 @@ footer a.ms {
 }
 #page-login .login-signin {
   background-color: #3fa9f5;
-  background-position: 20px 20px;
 }
 #page-login .login-register {
   background-color: #8db836;
-  background-position: -366px 20px;
-}
-#page-login .login-signin,
-#page-login .login-register,
-#page-login .spacer {
-  background-image: url("../imgs/red-symbol.png");
-  background-repeat: no-repeat;
 }
 #page-login form {
   margin: 8em auto 6em;

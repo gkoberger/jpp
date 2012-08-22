@@ -448,7 +448,7 @@ footer {
 /* Page: Main */
 .page-main {
     background-image: url("../imgs/bg-main.png");
-    background-position: 10px 300px;
+    background-position: 28px 350px;
     background-repeat: no-repeat;
     min-height: 780px;
 }
@@ -493,7 +493,7 @@ footer {
 /* Page: About */
 .page-about {
     background-image: url("../imgs/bg-about.png");
-    background-position: 130px 0;
+    background-position: 20px 0;
     background-repeat: no-repeat;
 }
 #page-about {
@@ -529,14 +529,21 @@ footer {
 /* Page: News */
 .page-news {
     background-image: url("../imgs/bg-news.png");
-    background-position: 20px center;
     background-repeat: no-repeat;
+    background-position: right bottom;
+    min-height: 794px;
+    #content {
+        background-image: url('../imgs/bg-news-social.png');
+        background-repeat: no-repeat;
+        background-position: 0px center;
+    }
 }
 #page-news {
     .boxy {
         border: 1px solid @light-gray;
         padding: 1em;
         margin-top: 2em;
+        background-color: #fff;
     }
     .blog {
         padding: 2em;
@@ -547,6 +554,11 @@ footer {
 }
 
 /* Page: Credits */
+.page-credits {
+    background-image: url("../imgs/bg-credits.png");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
 #page-credits {
     h2 {
         margin-bottom: 20px;
@@ -572,14 +584,6 @@ footer {
     .c5 { color: @jpp-orange; }
     .c6 { color: @jpp-brown; }
     .c7 { color: @jpp-green; }
-
-    img {
-        padding: 1em;
-        background-color: #fff;
-        .box-shadow(3px 3px 3px #ccc);
-        position: relative;
-        left: -1em;
-    }
 }
 
 /* Page: Contact */
@@ -590,8 +594,13 @@ footer {
     min-height: 658px;
 }
 #page-contact {
+    h2 {
+        text-transform: uppercase;
+        font-size: 48px;
+        padding-top: 35px;
+    }
     .contact {
-        padding-top: 2em;
+        padding-top: 5em;
     }
     input {
         margin-bottom: 10px;
@@ -642,15 +651,9 @@ footer {
     }
     .login-signin {
         background-color: @jpp-login-blue;
-        background-position: 20px 20px;
     }
     .login-register {
         background-color: @jpp-login-green;
-        background-position: -366px 20px;
-    }
-    .login-signin, .login-register, .spacer {
-        background-image: url("../imgs/red-symbol.png");
-        background-repeat: no-repeat;
     }
     form {
         margin: 8em auto 6em;
