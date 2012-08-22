@@ -440,6 +440,10 @@ footer a.ms {
   width: 738px;
   z-index: 1000;
 }
+#page-main .sliders #slider {
+  width: 738px;
+  height: 391px;
+}
 #page-main h2 {
   margin: 15px 0 0;
 }
