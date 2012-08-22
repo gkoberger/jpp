@@ -479,6 +479,10 @@ footer a.ms {
 #page-about #achievements {
   overflow: hidden;
 }
+#page-about #achievements #slider {
+  width: 577px;
+  height: 220px;
+}
 /* Page: News */
 .page-news {
   background-image: url("../imgs/bg-news.png");
