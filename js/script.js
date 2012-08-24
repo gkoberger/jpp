@@ -135,7 +135,12 @@ function updateFriends(type) {
             $p.append($icon);
 
             var $info = $('<div>', {'class': 'column unitx4'});
-            $info.append($('<h3>').append($('<a>', {'href': href, 'text': v.FullName})));
+            var $a = $('<a>', {'href': href, 'text': v.FullName});
+            if(v.DisplayName) {
+                var $span = $('<span>', {'text': ' (' + v.DisplayName + ')'});
+                $a.append($span);
+            }
+            $info.append($('<h3>').append($a));
             $info.append($('<p>', {'text': v.SixWordBio}));
             $p.append($info);
 
