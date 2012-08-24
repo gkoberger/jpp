@@ -774,6 +774,13 @@ footer a.logo.ms {
   color: #336666;
   margin-bottom: 15px;
 }
+.user-profile h4 {
+  color: #666666;
+  font-size: 17px;
+  font-weight: normal;
+  margin-top: 0;
+  font-family: "Microsoft Sans Serif", "Helvetica", "Arial", sans-serif;
+}
 .user-profile .is_friend {
   text-align: right;
   color: #333333;
