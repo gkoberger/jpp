@@ -69,14 +69,18 @@ $(function() {
                 $quad_parent.append($quad);
                 $p.append($quad_parent);
 
+                var href = site + 'Achievement/' + v.ID;
+
                 /* Icon */
-                var $icon = $('<div>', {'class': 'column unitx1'});
+                var $icon = $('<a>', {'href': href, 'class': 'column unitx1'});
                 $icon.append($('<img>', {'src': v.Icon, 'class': 'icon'}));
                 $p.append($icon);
 
                 /* The details */
                 var $text = $('<div>', {'class': 'column unitx4'});
-                $text.append($('<h3>', {'text': v.Name}));
+                var $a = $('<a>', {'href': href, 'text': v.Name});
+                $text.append($('<h3>').append($a));
+
                 $text.append($('<p>', {'text': v.Description}));
                 $p.append($text);
 
