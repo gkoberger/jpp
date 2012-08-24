@@ -2,6 +2,8 @@
  * backend would be implemented. I'd be happy to restructure it once we know how things will be
  * done on the actual site */
 
+var site = $('body').data('url');
+
 $(function() {
     /* Switch between achievement types on profile pages */
     $(window).on('click', '#my-achievements a', function(e) {
@@ -127,12 +129,13 @@ function updateFriends(type) {
                 $first.empty().append($a);
             }
 
-            var $icon = $('<div>', {'class': 'column unitx1'});
+            var href = site + 'Profile/' + v.ID;
+            var $icon = $('<a>', {'href': href, 'class': 'column unitx1'});
             $icon.append($('<img>', {'src': v.Photo, 'class': 'icon'}));
             $p.append($icon);
 
             var $info = $('<div>', {'class': 'column unitx4'});
-            $info.append($('<h3>', {'text': v.DisplayName}));
+            $info.append($('<h3>').append($('<a>', {'href': href, 'text': v.FullName})));
             $info.append($('<p>', {'text': v.SixWordBio}));
             $p.append($info);
 

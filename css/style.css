@@ -1355,6 +1355,9 @@ table.stats td:nth-child(3) {
 #page-friends h3 {
   color: #336666;
 }
+#page-friends h3 a {
+  text-decoration: none;
+}
 #page-friends .addFriend {
   background-image: url(../imgs/addFriend.png);
   display: inline-block;

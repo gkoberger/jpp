@@ -1,12 +1,16 @@
 [
 {
+    "ID": 1,
     "DisplayName":"BENJAMIN SNYDER",
-        "Friend":true,
-        "Photo":"imgs/tmp/weez.png",
-        "SixWordBio":"Oh my god I am BATMAN"
+    "FullName": "Benjamin Snyder",
+    "Friend":true,
+    "Photo":"imgs/tmp/weez.png",
+    "SixWordBio":"Oh my god I am BATMAN"
 },
 {
+    "ID": 2,
     "DisplayName":"LameSidekick",
+    "FullName": "John Smith",
     "Friend":false,
     "Photo":"imgs/tmp/weez.png",
     "SixWordBio":""
