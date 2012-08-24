@@ -7,6 +7,7 @@
 @jpp-blue: #336666;
 @jpp-brightblue: #0066cc;
 @jpp-lightblue: #3399ff;
+@jpp-darkblue: #336699;
 @jpp-green: #336666;
 @jpp-lime: #c9e394;
 @jpp-yellow: #F2DE92;
@@ -416,9 +417,22 @@ header {
 footer {
     background-color: #fff;
     overflow: hidden;
-    padding: 35px 0;
+    padding: 25px 0;
     border-top: 25px solid @light-gray;
-    a {
+    .center {
+        width: 1000px;
+    }
+    nav  {
+        float: left;
+        font-size: 12px;
+        a {
+            color: @jpp-darkblue;
+            text-transform: uppercase;
+            text-decoration: none;
+            padding: 0 5px;
+        }
+    }
+    a.logo {
         &:hover {
             opacity: 0.8;
         }
@@ -429,6 +443,7 @@ footer {
         &.igm {
             width: 89px;
             height: 70px;
+            margin-top: -16px;
             background-image: url(../imgs/sponsor-igm.png);
         }
         &.rit {
@@ -440,6 +455,7 @@ footer {
         &.ms {
             width: 101px;
             height: 46px;
+            margin-top: -7px;
             background-image: url(../imgs/sponsor-ms.png);
         }
     }

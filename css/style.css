@@ -368,32 +368,47 @@ header .logged-in a:hover {
 footer {
   background-color: #fff;
   overflow: hidden;
-  padding: 35px 0;
+  padding: 25px 0;
   border-top: 25px solid #cccccc;
 }
-footer a {
+footer .center {
+  width: 1000px;
+}
+footer nav {
+  float: left;
+  font-size: 12px;
+}
+footer nav a {
+  color: #336699;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0 5px;
+}
+footer a.logo {
   display: block;
   float: right;
   margin: 0 15px;
   text-indent: -9000px;
 }
-footer a:hover {
+footer a.logo:hover {
   opacity: 0.8;
 }
-footer a.igm {
+footer a.logo.igm {
   width: 89px;
   height: 70px;
+  margin-top: -16px;
   background-image: url(../imgs/sponsor-igm.png);
 }
-footer a.rit {
+footer a.logo.rit {
   width: 102px;
   height: 31px;
   margin-top: 5px;
   background-image: url(../imgs/sponsor-rit.png);
 }
-footer a.ms {
+footer a.logo.ms {
   width: 101px;
   height: 46px;
+  margin-top: -7px;
   background-image: url(../imgs/sponsor-ms.png);
 }
 /* Page: Main */
