@@ -114,7 +114,7 @@ function updateFriends(type) {
         $('#results .person').remove();
         $('#results').removeClass('loading');
         $.each(d, function(k, v) {
-            var $p = $('<div>', {'class': 'person', 'data-text': v.DisplayName});
+            var $p = $('<div>', {'class': 'person', 'data-text': v.DisplayName + '|' + v.FullName});
 
             /* Add friend button? */
             var $first = $('<div>', {'class': 'first column unitx1', 'html': '&nbsp;'});
