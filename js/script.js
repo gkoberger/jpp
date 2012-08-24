@@ -199,10 +199,14 @@ function createSlider() {
 
     var $controls = $('<div>', {'class': 'controls'});
     var $left = $('<a>', {'href': '#', 'class': 'jpp rotate small'});
+    var autoslide = setInterval(function() {
+        $slider.trigger('next');
+    }, 15000);
     $controls.append($left);
     $left.click(function(e) {
         e.preventDefault();
         $('#slider').trigger('prev');
+        clearInterval(autoslide);
     });
 
     var i = 0;
@@ -213,6 +217,7 @@ function createSlider() {
         $a.click(function(e) {
             e.preventDefault();
             $('#slider').trigger('goto', [num]);
+            clearInterval(autoslide);
         });
         i++;
     });
@@ -222,6 +227,7 @@ function createSlider() {
     $right.click(function(e) {
         e.preventDefault();
         $('#slider').trigger('next');
+        clearInterval(autoslide);
     });
 
     $slider.after($controls);
