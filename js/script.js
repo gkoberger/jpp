@@ -50,29 +50,34 @@ $(function() {
             $.each(d, function(k, v) {
                 var $p = $('<div>', {'class': 'person',
                                      'data-text': v.Name});
+                $p.append($('<div>', {'class': 'first column unitx1', 'html':'&nbsp;'}));
+
+                var href = site + 'Quest/' + v.ID;
 
                 /* The quad */
-                var $quad = $('<div>', {'class': 'tinyquad'});
-                var $quad_parent = $('<div>', {'class': 'column unitx1 first'});
                 if(v.PointsExplore) {
-                    $quad.append($('<div>', {'class': 'quad-explore', 'text': v.PointsExplore}));
-                }
-                if(v.PointsLearn) {
-                    $quad.append($('<div>', {'class': 'quad-learn', 'text': v.PointsLearn}));
-                }
-                if(v.PointsMake) {
-                    $quad.append($('<div>', {'class': 'quad-make', 'text': v.PointsMake}));
-                }
-                if(v.PointsSocial) {
-                    $quad.append($('<div>', {'class': 'quad-social', 'text': v.PointsSocial}));
-                }
-                $quad_parent.append($quad);
-                $p.append($quad_parent);
+                    href = site + 'Achievement/' + v.ID;
 
-                var href = site + 'Achievement/' + v.ID;
+                    $p.addClass('quad');
+                    var $quad = $('<div>', {'class': 'tinyquad'});
+                    if(v.PointsExplore) {
+                        $quad.append($('<div>', {'class': 'quad-explore', 'text': v.PointsExplore}));
+                    }
+                    if(v.PointsLearn) {
+                        $quad.append($('<div>', {'class': 'quad-learn', 'text': v.PointsLearn}));
+                    }
+                    if(v.PointsMake) {
+                        $quad.append($('<div>', {'class': 'quad-make', 'text': v.PointsMake}));
+                    }
+                    if(v.PointsSocial) {
+                        $quad.append($('<div>', {'class': 'quad-social', 'text': v.PointsSocial}));
+                    }
+                }
 
                 /* Icon */
                 var $icon = $('<a>', {'href': href, 'class': 'column unitx1'});
+                $icon.append($quad);
+
                 $icon.append($('<img>', {'src': v.Icon, 'class': 'icon'}));
                 $p.append($icon);
 
@@ -82,6 +87,7 @@ $(function() {
                 $text.append($('<h3>').append($a));
 
                 $text.append($('<p>', {'text': v.Description}));
+
                 $p.append($text);
 
                 /* Add it to the page */

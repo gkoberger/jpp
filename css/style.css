@@ -159,13 +159,13 @@ ul {
   float: left;
 }
 .tinyquad {
-  background-image: url(../imgs/tinyquad.png);
   background-repeat: no-repeat;
-  background-position: relative;
+  bottom: 0;
   height: 54px;
-  position: relative;
+  position: absolute;
+  right: -43px;
   width: 54px;
-  float: right;
+  background-image: url(../imgs/tinyquad.png);
 }
 .tinyquad div {
   -webkit-box-sizing: border-box;
@@ -177,7 +177,7 @@ ul {
   position: absolute;
 }
 .tinyquad div.quad-explore {
-  padding: 1px 4px 0 7px;
+  padding: 1px 4px 0 5px;
   top: 27px;
   left: 27px;
 }
@@ -188,12 +188,12 @@ ul {
   text-align: right;
 }
 .tinyquad div.quad-learn {
-  padding: 5px 4px 0 7px;
+  padding: 7px 4px 0 5px;
   top: 0;
   left: 27px;
 }
 .tinyquad div.quad-make {
-  padding: 5px 4px 0;
+  padding: 7px 4px 0;
   text-align: right;
   top: 0;
   left: 0;
@@ -1166,6 +1166,14 @@ table.stats td:nth-child(3) {
 #page-friends .person {
   margin-top: 2em;
   overflow: hidden;
+}
+#page-achievements .person.quad .column,
+#page-friends .person.quad .column {
+  position: relative;
+}
+#page-achievements .person.quad p,
+#page-friends .person.quad p {
+  margin-left: 45px;
 }
 #search-bar {
   margin-left: -35px;
