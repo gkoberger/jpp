@@ -247,4 +247,8 @@ function onloader() {
     if($('#slider').length) {
         createSlider();
     }
+
+    if(!placeholderIsSupported()) {
+        $('body').placeholders();
+    }
 }

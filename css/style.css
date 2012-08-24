@@ -22,6 +22,9 @@ a:hover {
   width: 1060px;
   margin: auto;
 }
+.placeholder {
+  color: #666;
+}
 h2,
 h3 {
   margin: 0;
