@@ -55,7 +55,7 @@ $(function() {
                 var href = site + 'Quest/' + v.ID;
 
                 /* The quad */
-                if(v.PointsExplore) {
+                if(v.PointsExplore !== undefined) {
                     href = site + 'Achievement/' + v.ID;
 
                     $p.addClass('quad');
