@@ -524,6 +524,13 @@ footer {
         &.c1 { color: @jpp-logo-red; }
         &.c2 { color: @jpp-logo-blue; }
         &.c3 { color: @jpp-logo-green; }
+
+        &.c1 em {
+            color: @medium-gray;
+            font-size: 25px;
+            font-style: normal;
+            padding-right: 5px;
+        }
     }
 }
 #page-main  {
@@ -1536,6 +1543,106 @@ table.stats {
         .delete {
             background-position: -196px 0;
             width: 94px;
+        }
+    }
+}
+
+/* Page: Tutorial */
+#page-tutorial {
+    .achievements {
+        background-color: #fdfbfb;
+        border: 1px solid #e5e5e5;
+        .box-shadow(3px 3px 3px #EEE);
+        .border-box;
+        margin-bottom: 2em;
+        padding-bottom: 16px;
+        font-size: 13px;
+        h3 {
+            color: @jpp-brightblue;
+            font-size: 14px;
+            font-family: @sans;
+            padding-bottom: 2px;
+        }
+        .column {
+            margin-top: 16px;
+        }
+        .unitx1 {
+            &.first img {
+                margin-left: 16px;
+            }
+            width: 107px;
+            img {
+                width: 90px;
+            }
+        }
+    }
+    .note {
+        font-size: 12px;
+        text-align: right;
+        strong {
+            font-size: 24px;
+            font-weight: normal;
+            padding: 0 0 0 8px;
+        }
+    }
+    .sliders {
+        .box-shadow(2px 2px 2px #CCCCCC);
+        background-color: #FFFFFF;
+        left: -18px;
+        padding: 15px;
+        position: relative;
+        width: 738px;
+        z-index: 1000;
+        margin-bottom: 3em;
+        #slider {
+            width: 738px;
+            height: 391px;
+        }
+    }
+
+    .tutorial-controls {
+        width: 100%;
+        td {
+            border-left: 1px solid @note-gray;
+            padding: 0;
+            &:first-child {
+                border-left: 0 none;
+            }
+            a {
+                display: block;
+                color: @jpp-brightblue;
+                text-decoration: none;
+                text-align: center;
+                font-size: 13px;
+                padding: 5px;
+                &:hover {
+                    background-color: #eee;
+                }
+                &.on {
+                    background-color: #fddf97;
+                }
+            }
+        }
+    }
+    .start {
+        font-size: 12px;
+        color: #999;
+        text-align: right;
+        line-height: 1.6em;
+        a {
+            font-size: 15px;
+            display: block;
+            line-height: 2em;
+        }
+    }
+    .go {
+        width: 149px;
+        height: 149px;
+        background-image: url('../imgs/go.png');
+        display: block;
+        text-indent: -900000px;
+        &:hover {
+            opacity: 0.8;
         }
     }
 }

@@ -487,6 +487,12 @@ footer a.logo.ms {
 .logo-big span.c3 {
   color: #99cc33;
 }
+.logo-big span.c1 em {
+  color: #666666;
+  font-size: 25px;
+  font-style: normal;
+  padding-right: 5px;
+}
 #page-main .details {
   padding: 1em;
   background-color: #fff;
@@ -1524,4 +1530,106 @@ table.stats td:nth-child(3) {
 #page-inbox .buttons .delete {
   background-position: -196px 0;
   width: 94px;
+}
+/* Page: Tutorial */
+#page-tutorial .achievements {
+  background-color: #fdfbfb;
+  border: 1px solid #e5e5e5;
+  box-shadow: 3px 3px 3px #eeeeee;
+  -moz-box-shadow: 3px 3px 3px #eeeeee;
+  -webkit-box-shadow: 3px 3px 3px #eeeeee;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-bottom: 2em;
+  padding-bottom: 16px;
+  font-size: 13px;
+}
+#page-tutorial .achievements h3 {
+  color: #0066cc;
+  font-size: 14px;
+  font-family: "Microsoft Sans Serif", "Helvetica", "Arial", sans-serif;
+  padding-bottom: 2px;
+}
+#page-tutorial .achievements .column {
+  margin-top: 16px;
+}
+#page-tutorial .achievements .unitx1 {
+  width: 107px;
+}
+#page-tutorial .achievements .unitx1.first img {
+  margin-left: 16px;
+}
+#page-tutorial .achievements .unitx1 img {
+  width: 90px;
+}
+#page-tutorial .note {
+  font-size: 12px;
+  text-align: right;
+}
+#page-tutorial .note strong {
+  font-size: 24px;
+  font-weight: normal;
+  padding: 0 0 0 8px;
+}
+#page-tutorial .sliders {
+  box-shadow: 2px 2px 2px #cccccc;
+  -moz-box-shadow: 2px 2px 2px #cccccc;
+  -webkit-box-shadow: 2px 2px 2px #cccccc;
+  background-color: #FFFFFF;
+  left: -18px;
+  padding: 15px;
+  position: relative;
+  width: 738px;
+  z-index: 1000;
+  margin-bottom: 3em;
+}
+#page-tutorial .sliders #slider {
+  width: 738px;
+  height: 391px;
+}
+#page-tutorial .tutorial-controls {
+  width: 100%;
+}
+#page-tutorial .tutorial-controls td {
+  border-left: 1px solid #999999;
+  padding: 0;
+}
+#page-tutorial .tutorial-controls td:first-child {
+  border-left: 0 none;
+}
+#page-tutorial .tutorial-controls td a {
+  display: block;
+  color: #0066cc;
+  text-decoration: none;
+  text-align: center;
+  font-size: 13px;
+  padding: 5px;
+}
+#page-tutorial .tutorial-controls td a:hover {
+  background-color: #eee;
+}
+#page-tutorial .tutorial-controls td a.on {
+  background-color: #fddf97;
+}
+#page-tutorial .start {
+  font-size: 12px;
+  color: #999;
+  text-align: right;
+  line-height: 1.6em;
+}
+#page-tutorial .start a {
+  font-size: 15px;
+  display: block;
+  line-height: 2em;
+}
+#page-tutorial .go {
+  width: 149px;
+  height: 149px;
+  background-image: url('../imgs/go.png');
+  display: block;
+  text-indent: -900000px;
+}
+#page-tutorial .go:hover {
+  opacity: 0.8;
 }

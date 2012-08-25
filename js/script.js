@@ -184,6 +184,8 @@ function createSlider() {
     var h = $slider.height();
     var left = 0;
 
+    var hide_controls = $slider.hasClass('hide_controls');
+
     if(!$wrapper) return;
 
     $wrapper.width(w * $wrapper.children().length);
@@ -200,11 +202,13 @@ function createSlider() {
             left = 0;
         }
         $wrapper.css({'left': left});
+        $slider.trigger('change', [Math.abs(left / w)]);
     });
 
     $slider.bind('goto', function(e, i) {
         left = i * w * -1;
         $wrapper.css({'left': left});
+        $slider.trigger('change', [i]);
     });
 
     $slider.bind('prev', function() {
@@ -213,42 +217,50 @@ function createSlider() {
             left = ($wrapper.children().length - 1) * w * -1;
         }
         $wrapper.css({'left': left});
+        $slider.trigger('change', [Math.abs(left / w)]);
     });
 
-    var $controls = $('<div>', {'class': 'controls'});
-    var $left = $('<a>', {'href': '#', 'class': 'jpp rotate small'});
     var autoslide = setInterval(function() {
         $slider.trigger('next');
     }, 15000);
-    $controls.append($left);
-    $left.click(function(e) {
-        e.preventDefault();
-        $('#slider').trigger('prev');
-        clearInterval(autoslide);
+
+    $slider.bind('stop', function() {
+            clearInterval(autoslide);
     });
 
-    var i = 0;
-    $wrapper.children().each(function() {
-        var $a = $('<a>', {'href': '#', 'class': 'pacman-dot'});
-        var num = i;
-        $controls.append($a);
-        $a.click(function(e) {
+    if(!hide_controls) {
+        var $controls = $('<div>', {'class': 'controls'});
+        var $left = $('<a>', {'href': '#', 'class': 'jpp rotate small'});
+        $controls.append($left);
+        $left.click(function(e) {
             e.preventDefault();
-            $('#slider').trigger('goto', [num]);
+            $('#slider').trigger('prev');
             clearInterval(autoslide);
         });
-        i++;
-    });
 
-    var $right = $('<a>', {'href': '#', 'class': 'jpp small'});
-    $controls.append($right);
-    $right.click(function(e) {
-        e.preventDefault();
-        $('#slider').trigger('next');
-        clearInterval(autoslide);
-    });
+        var i = 0;
+        $wrapper.children().each(function() {
+            var $a = $('<a>', {'href': '#', 'class': 'pacman-dot'});
+            var num = i;
+            $controls.append($a);
+            $a.click(function(e) {
+                e.preventDefault();
+                $('#slider').trigger('goto', [num]);
+                clearInterval(autoslide);
+            });
+            i++;
+        });
 
-    $slider.after($controls);
+        var $right = $('<a>', {'href': '#', 'class': 'jpp small'});
+        $controls.append($right);
+        $right.click(function(e) {
+            e.preventDefault();
+            $('#slider').trigger('next');
+            clearInterval(autoslide);
+        });
+
+        $slider.after($controls);
+    }
 }
 
 function showErrors() {
@@ -298,6 +310,21 @@ function onloader() {
 
     if(!placeholderIsSupported()) {
         $('body').placeholders();
+    }
+
+    $tc = $('.tutorial-controls');
+    if($tc.length) {
+        $tc.find('a').click(function(e) {
+            $('#slider').trigger('stop');
+            e.preventDefault();
+            var num = $(this).data('num');
+            $('#slider').trigger('goto', [num]);
+        });
+
+        $('#slider').bind('change', function(e, i) {
+            $tc.find('.on').removeClass('on');
+            $tc.find('a').eq(i).addClass('on');
+        });
     }
 
     showErrors();
