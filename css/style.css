@@ -1316,7 +1316,7 @@ table.stats td:nth-child(3) {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  background-image: url("http://localhost:8001/css/../imgs/main-green.png");
+  background-image: url("../imgs/main-green.png");
   background-position: right top;
   color: #FFFFFF;
   font-size: 27px;
