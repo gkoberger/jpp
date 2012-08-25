@@ -251,6 +251,36 @@ function createSlider() {
     $slider.after($controls);
 }
 
+function showErrors() {
+    showPopup('errors');
+}
+
+function showSuccess() {
+    showPopup('success');
+}
+
+function showPopup(type) {
+    $('#'+type+'-pop').remove();
+    var $pop = $('<div>', {'id': type+'-pop'});
+    var pop = $('.'+type+'-pop');
+    $pop.append(pop);
+    if(pop.length) {
+        $pop.show();
+    }
+
+    var $close = $('<a>', {'href': '#',
+                   'text': 'x', 'class': 'close'});
+
+    $close.click(function(e) {
+        e.preventDefault();
+        $('#'+type+'-pop').remove();
+    });
+
+    $pop.append($close);
+
+    $('body').append($pop);
+}
+
 /* Stuff in here will be called on page onload */
 function onloader() {
     var $selector = $('.selector.on');
@@ -269,4 +299,7 @@ function onloader() {
     if(!placeholderIsSupported()) {
         $('body').placeholders();
     }
+
+    showErrors();
+    showSuccess();
 }

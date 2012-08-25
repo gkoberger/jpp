@@ -209,6 +209,52 @@ ul {
   -webkit-transition: all 1s ease-out;
   transition: all 1s ease-out;
 }
+#errors-pop {
+  background-color: #fdb302;
+}
+#success-pop {
+  background-color: #99cc33;
+}
+#errors-pop,
+#success-pop {
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
+  left: 50%;
+  margin-left: -215px;
+  padding: 30px;
+  position: fixed;
+  top: 3em;
+  width: 400px;
+  display: none;
+}
+#errors-pop .close,
+#success-pop .close {
+  color: #FFFFFF;
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 11px;
+  position: absolute;
+  right: 10px;
+  text-decoration: none;
+  top: 10px;
+  padding: 5px 5px 9px;
+}
+#errors-pop .close:hover,
+#success-pop .close:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+#errors-pop > div,
+#success-pop > div {
+  margin-top: 1em;
+}
+#errors-pop > div:first-child,
+#success-pop > div:first-child {
+  margin-top: 0;
+}
 /* JPP Logo in CSS */
 .jpp {
   width: 40px;

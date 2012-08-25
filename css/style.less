@@ -253,6 +253,46 @@ p, ul {
     }
 }
 
+#errors-pop {
+    background-color: @topbar;
+}
+
+#success-pop {
+    background-color: @jpp-logo-green;
+}
+
+#errors-pop, #success-pop {
+    .box-shadow(5px 5px 5px rgba(0, 0, 0, 0.4));
+    left: 50%;
+    margin-left: -215px;
+    padding: 30px;
+    position: fixed;
+    top: 3em;
+    width: 400px;
+    display: none;
+    .close {
+        color: #FFFFFF;
+        font-size: 22px;
+        font-weight: bold;
+        line-height: 11px;
+        position: absolute;
+        right: 10px;
+        text-decoration: none;
+        top: 10px;
+        padding: 5px 5px 9px;
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.1);
+            .border-radius(4px);
+        }
+    }
+    > div {
+        margin-top: 1em;
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+}
+
 /* JPP Logo in CSS */
 .jpp {
     width: 40px;
