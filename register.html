@@ -1,41 +1,62 @@
 <div id="page-register">
   <div class="column first unitx1">&nbsp;</div>
   <div class="column unitx6 login-register">
-    <h2>Register</h1>
-    <form method="POST" action="" enctype="multipart/form-data">
-      <div>
-      <label for="f_username">Create a Username</label>
-      <input type="text" name="username" id="f_username">
-      </div>
+    <h2>Register</h2>
+	<script src="/Scripts/jquery.validate.min.js" type="text/javascript"></script>
+	<script src="/Scripts/jquery.validate.unobtrusive.min.js" type="text/javascript"></script>
 
+	
+
+<form action="/Account/Register" enctype="multipart/form-data" id="parentForm" method="post">     
+	  <div>
+	  <p>We ask for your RIT username and password to verify that you're an IGM student and retrieve basic directory information.</p>
+      <label for="f_dce">DCE Username</label>
+      <input data-val="true" data-val-required="The dce field is required." id="f_dce" name="dce" type="text" value="" />
+      
+      <label for="f_dcepassword">DCE Password</label>
+      <input data-val="true" data-val-required="The dcePassword field is required." id="f_dcepassword" name="dcePassword" type="password" />
+      </div>
+      
+	  <div>
+	        <p>You'll use a username and password that you create to log into the game. Your username will not be displayed to other users, and it cannot be changed after you create it. </p>
+
+      <label for="f_username">Create a Username</label>
+      <input data-val="true" data-val-required="The User name field is required." id="f_username" name="UserName" type="text" value="" />
+      </div>
+      
       <div>
       <label for="f_password">Create a Password</label>
-      <input type="password" name="password" id="f_password">
+       <input data-val="true" data-val-length="The Password must be at least 6 characters long." data-val-length-max="100" data-val-length-min="6" data-val-required="The Password field is required." id="f_password" name="Password" type="password" />
       </div>
-
+      
       <div>
       <label for="f_password_verify">Verify Password</label>
-      <input type="password" name="password_verify" id="f_password_verify">
+      <input data-val="true" data-val-equalto="The password and confirmation password do not match." data-val-equalto-other="*.Password" id="f_password_verify" name="ConfirmPassword" type="password" />
       </div>
+      
+			<div>
+			<label for="f_dev_password">Dev Password</label>
+			<input id="f_dev_password" name="DevPassword" placeholder="DEV PASSWORD" type="password" />
+			</div>
+			
+      <div id="optional_registration">
+      
+      <p><strong>Optional:</strong> You can add a display name (or nickname) for other players to see, and a profile photo. These can be changed at any time.</p>
+      		<div>
+			<label for="f_displayname">Display Name</label>
+			<input id="f_displayname" name="DisplayName" type="text" />
+			</div>
 
-      <div>
-      <label for="f_display_name">Create a display name</label>
-      <input type="text" name="display_name" id="f_display_name">
-      </div>
-
-      <div>
         <label for="f_icon">
           <img src="imgs/icon.png">
         </label>
         <div class="icon_info">
-
-          Add a Profile Picture<br>
-          <input type="file" name="icon" id="f_icon">
+          <p id="picheading">Profile Picture</p>
+          <input type="file" name="ImageUploaded" id="f_icon" />
           <p>*You have the option to display a profile picture. You have the ability to change your picture at any time.</p>
         </div>
       </div>
-
-      <input type="image" src="imgs/login.png" alt="Play">
-    </form>
+      
+      <input type="image" src="imgs/login.png" alt="Play" />
+</form>
   </div>
-</div>
