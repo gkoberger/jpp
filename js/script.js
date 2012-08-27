@@ -132,10 +132,10 @@ function updateFriends(type) {
             /* Add friend button? */
             if(v.CanFriend) {
                 var $a = $('<a>', {'href': '#', 'text': 'Add Friend', 'class': 'addFriend', 'data-id': v.ID});
-                $a.one('click', function(e) {
+                $a.click(function(e) {
                     e.preventDefault();
-                    var id = $(this).attr('data-id');
                     var $this = $(this);
+                    var id = $this.attr('data-id');
                     $.post(site + 'People/AddFriend/' + id, function() {
                         $this.addClass('on');
                     });

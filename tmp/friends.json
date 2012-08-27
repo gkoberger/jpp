@@ -9,6 +9,7 @@
 },
 {
     "ID": 2,
+    "CanFriend": true,
     "DisplayName":"LameSidekick",
     "FullName": "John Smith",
     "Friend":false,
