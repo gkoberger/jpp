@@ -126,15 +126,17 @@ function updateFriends(type) {
         $.each(d, function(k, v) {
             var $p = $('<div>', {'class': 'person', 'data-text': v.DisplayName + '|' + v.FullName});
 
-            /* Add friend button? */
             var $first = $('<div>', {'class': 'first column unitx1', 'html': '&nbsp;'});
             $p.append($first);
 
-            if(!v.Friend) {
-                var $a = $('<a>', {'href': '#', 'text': 'Add Friend', 'class': 'addFriend'});
+            /* Add friend button? */
+            if(v.CanFriend) {
+                var $a = $('<a>', {'href': '#', 'text': 'Add Friend', 'class': 'addFriend', 'id': v.ID});
                 $a.one('click', function() {
-                    alert('This is where the add-friend code goes! Talk to Greg about implementing this :)');
-                    $(this).addClass('on');
+                    var id = $(this).attr('data-id');
+                    $.post(site + 'People/AddFriend/' + id, function() {
+                        $(this).addClass('on');
+                    });
                 });
                 $first.empty().append($a);
             }
