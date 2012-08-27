@@ -1015,6 +1015,19 @@ table.stats td:nth-child(3) {
 #my-achievements-all  > div:first-child {
   display: block;
 }
+#my-achievements-all .have div {
+  margin-top: 2em;
+}
+#my-achievements-all .have div h3 {
+  text-align: right;
+  margin: 0;
+}
+#my-achievements-all .have div .edit {
+  float: right;
+  color: #0066cc;
+  text-decoration: none;
+  font-size: 11px;
+}
 #my-achievements-all #my-achievements-tracking {
   overflow: hidden;
   max-height: none;
