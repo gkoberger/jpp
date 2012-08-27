@@ -37,9 +37,50 @@
   </nav>
   <div id="my-achievements-all">
     <div class="quests clear" id="my-achievement-me">
-      <br><br>
-      (I don't know what goes here)
-      <br><br>
+
+      <!-- This is for not having it -->
+
+      <form enctype="multipart/form-data" method="POST" action="">
+        <div class="column first width1">&nbsp;</div>
+        <div class="column width3"><h3>You do not have this achievement</h3></div>
+
+        <div class="column first width1 indent">&nbsp;</div>
+        <div class="column unitx5"><p>
+            This achievement requires you to submit a photo and a description of the photo. If they're approved, both will be displayed on your achievement page.
+            (Need to provide specs on image here...formats and sizes allowed.)</p></div>
+
+        <!-- (Pick and choose these as needed: -->
+
+        <div class="column first width2">&nbsp;</div>
+        <div class="column width2">
+          <label>Upload File</label>
+          <input type="file">
+        </div>
+
+        <div class="column first width2">&nbsp;</div>
+        <div class="column width2">
+          <label>URL</label>
+          <input type="text" placeholder="http://">
+        </div>
+
+        <div class="column first width2">&nbsp;</div>
+        <div class="column width2">
+          <label>Additional Information</label>
+          <textarea></textarea>
+        </div>
+
+        <div class="column first width2">&nbsp;</div>
+        <div class="column width2">
+          <label>Tell Your Story</label>
+          <textarea></textarea>
+        </div>
+
+        <div class="column first width2">&nbsp;</div>
+        <div class="column width2 submit">
+          <input type="image" src="imgs/submit-green.png" class="submit" value="Submit">
+        </div>
+      </form>
+
     </div>
     <div class="quests clear" id="my-achievement-friends">
       <br><br>

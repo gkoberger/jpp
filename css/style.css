@@ -788,8 +788,14 @@ footer a.logo.ms {
   width: 250px;
 }
 #page-register .login-register input[type=text]#f_password,
-#page-register .login-register input[type=password]#f_password {
+#page-register .login-register input[type=password]#f_password,
+#page-register .login-register input[type=text]#f_dce,
+#page-register .login-register input[type=password]#f_dce {
   margin-bottom: 7px;
+}
+#page-register .login-register #optional_registration {
+  border-top: 1px solid black;
+  padding-top: 20px;
 }
 #page-register .login-register label[for=f_icon] img {
   box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
@@ -803,9 +809,13 @@ footer a.logo.ms {
 #page-register .login-register .icon_info input {
   margin-top: 1em;
 }
+#page-register .login-register .icon_info#picheading {
+  font-size: 16px;
+}
 #page-register .login-register p {
   color: #222;
   margin-top: 1em;
+  font-size: 14px;
 }
 #page-register .login-register input[type=image] {
   float: right;
@@ -962,8 +972,45 @@ table.stats td:nth-child(3) {
 #my-achievements a:hover {
   background-color: #6f912a;
 }
+#my-achievements-all {
+  background-color: #fff;
+  float: left;
+  padding: 2em 0;
+}
+#my-achievements-all h3 {
+  color: #333;
+  margin-bottom: 1em;
+}
+#my-achievements-all .indent {
+  background-image: url('../imgs/indent.png');
+  background-repeat: no-repeat;
+  background-position: top right;
+  min-height: 47px;
+}
+#my-achievements-all label {
+  color: #888888;
+  display: block;
+  font-size: 12px;
+  margin-top: 20px;
+  padding-bottom: 7px;
+  text-transform: uppercase;
+}
+#my-achievements-all .submit {
+  text-align: right;
+  margin-top: 10px;
+}
+#my-achievements-all input[type=text],
+#my-achievements-all textarea {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 1px solid #CCCCCC;
+  padding: 5px;
+  width: 100%;
+}
 #my-achievements-all  > div {
   display: none;
+  max-height: none;
 }
 #my-achievements-all  > div:first-child {
   display: block;
@@ -1632,4 +1679,15 @@ table.stats td:nth-child(3) {
 }
 #page-tutorial .go:hover {
   opacity: 0.8;
+}
+/* Page: Admin Pages */
+#userID {
+  width: 400px;
+}
+#achievementID {
+  width: 400px;
+}
+#assignbutton {
+  font-size: 18px;
+  margin-top: 20px;
 }

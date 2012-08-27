@@ -62,17 +62,17 @@
          </ul>
         <input type="image" src="imgs/submit-green.png" class="submit" value="Submit">
       </section>
-      
+
       <h3>Change Your Password</h3>
 	  <section>
-		<p>Enter your old password:<br /> 
+		<p>Enter your old password:<br />
 		<input id="changePassword_OldPassword" name="changePassword.OldPassword" placeholder="Current Password" type="password" /></p>
-		
+
 		<p>Enter your new password: <br /><input data-val="true" data-val-length="The New password must be at least 6 characters long." data-val-length-max="100" data-val-length-min="6" id="changePassword_NewPassword" name="changePassword.NewPassword" placeholder="New Password" type="password" /></p>
 		<p>Re-enter your new password:</br>
 		<input data-val="true" data-val-equalto="The new password and confirmation password do not match." data-val-equalto-other="*.NewPassword" id="changePassword_ConfirmPassword" name="changePassword.ConfirmPassword" placeholder="Confirm Password" type="password" /></p>
 		<br /><br />
-		
+
         <input type="image" src="imgs/submit-green.png" class="submit" value="Submit">
 	  </section>
     </form>
@@ -81,18 +81,18 @@
     <section>
       <div id="leave-options">
 		<p><strong>Deactivate your account:</strong> Your account will be hidden from other users, but your friend list and your achievements will be retained. When you choose this option, you will immediately be logged out. Logging back in will automatically reactivate your account.</p>
-			<form action="/Profile/Deactivate" method="post">	
+			<form action="/Profile/Deactivate" method="post">
 			<input type="image" src="imgs/deactivate-account.png" class="submit" value="Submit">
-			</form>	
+			</form>
 
-		
+
 		<div style="margin-top: 70px; border-top: 1px solid red; padding-top: 10px;">
 		<p><strong>Permanently delete your account:</strong> Your account, and all your achievements, will be completely deleted. This CANNOT be undone. You can re-register to play, but none of your old achievements will transfer to the new account.</p>
 		<p>You must enter your current password in the box below in order to proceed.</p>
-			<form action="/Profile/Delete" method="post">			
+			<form action="/Profile/Delete" method="post">
 			<p><input type="password" name="password" placeholder="Enter your password" />
-			<input type="image" src="imgs/delete-account.png" class="submit" value="Submit">			
-			</form>  
+			<input type="image" src="imgs/delete-account.png" class="submit" value="Submit">
+			</form>
 		</div>
 	   </div>
 	 <section>

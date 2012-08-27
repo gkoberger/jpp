@@ -829,7 +829,7 @@ footer {
             border-top: 1px solid black;
             padding-top: 20px;
         }
-            
+
         label[for=f_icon] img {
             .box-shadow(3px 3px 3px rgba(0,0,0,0.3));
         }
@@ -1004,8 +1004,40 @@ table.stats {
 }
 
 #my-achievements-all {
+    background-color: #fff;
+    float: left;
+    padding: 2em 0;
+    h3 {
+        color: #333;
+        margin-bottom: 1em;
+    }
+    .indent {
+        background-image: url('../imgs/indent.png');
+        background-repeat: no-repeat;
+        background-position: top right;
+        min-height: 47px;
+    }
+    label {
+        color: #888888;
+        display: block;
+        font-size: 12px;
+        margin-top: 20px;
+        padding-bottom: 7px;
+        text-transform: uppercase;
+    }
+    .submit {
+        text-align: right;
+        margin-top: 10px;
+    }
+    input[type=text], textarea {
+        .border-box;
+        border: 1px solid #CCCCCC;
+        padding: 5px;
+        width: 100%;
+    }
     & > div {
         display: none;
+        max-height: none;
         &:first-child {
             display: block;
         }
