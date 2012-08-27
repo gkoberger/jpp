@@ -1681,11 +1681,16 @@ table.stats td:nth-child(3) {
 #page-tutorial .start a {
   font-size: 15px;
   display: block;
-  line-height: 2em;
+  line-height: 1em;
+  padding-bottom: 7px;
+}
+#page-tutorial .start img {
+  width: 100%;
 }
 #page-tutorial .go {
-  width: 149px;
-  height: 149px;
+  width: 60px;
+  height: 60px;
+  background-size: cover;
   background-image: url('../imgs/go.png');
   display: block;
   text-indent: -900000px;
