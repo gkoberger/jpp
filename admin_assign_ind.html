@@ -1,0 +1,60 @@
+ 
+<div id="page" class="center ">
+	<section class="width4 stroke"> 
+	<div id="content">
+		<h2>
+			Assign Individual Achievements
+		</h2>
+		<form action="/Admin/AssignAchievement" method="post">
+			<fieldset>
+				<legend>Choose a Player and an Achievement</legend> 
+				<input data-val="true" data-val-number="The field assignedByID must be a number." data-val-required="The assignedByID field is required." id="assignedByID" name="assignedByID" type="hidden" value="9" />
+				<select data-val="true" data-val-number="The field userID must be a number." data-val-required="The userID field is required." id="userID" name="userID" size="20">
+					<option value="6">Batman (Benjamin Snyder) - 6</option>
+					<option value="11">mamamusings (Elizabeth Lawley) - 11</option>
+					<option value="13">Weez (Elouise Oyzon - 13</option>
+					<option value="14">testplayer</option>
+					<option value="15">andy</option>
+					<option value="16">clayface</option>
+					<option value="17">bane</option>
+					<option value="18">strange</option>
+					<option value="19">croc</option>
+					<option value="20">penguin</option>
+					<option value="21">ras</option>
+					<option value="22">riddler</option>
+					<option value="23">redhood</option>
+					<option value="24">grundy</option>
+				</select>
+				<select data-val="true" data-val-number="The field achievementID must be a number." data-val-required="The achievementID field is required." id="achievementID" name="achievementID" size="20">
+					<option value="5">TestAchievement!</option>
+					<option value="6">AnotherTestzzz</option>
+					<option value="7">Forum Thing</option>
+					<option value="8">Upload a Photo!</option>
+					<option value="9">flocking to meetings</option>
+					<option value="10">flocking to meetings: 3x</option>
+					<option value="12">Four Point Explore</option>
+					<option value="13">Four Point Socialize</option>
+					<option value="14">Four Point Learn</option>
+					<option value="15">Balancing Act I</option>
+					<option value="19">6 word bio</option>
+					<option value="11">flocking to meetings: 9x</option>
+					<option value="16">Testing 4x</option>
+					<option value="17">Testing assigning multiple users</option>
+					<option value="18">photo upload test</option>
+					<option value="20">friends!</option>
+				</select>
+			</fieldset>
+				
+			<fieldset>
+				<legend>Card Given to Player?</legend> 
+				<p><input data-val="true" data-val-required="The cardGiven field is required." id="cardGiven" name="cardGiven" type="radio" value="true" /> Yes <br />
+				<input data-val="true" data-val-required="The cardGiven field is required." id="cardGiven" name="cardGiven" type="radio" value="false" checked/> No</p>
+			</fieldset>
+			
+			<input type="submit" id="assignbutton" value="Assign Achievement" />
+			
+
+		</form>
+	</div>
+	</section> 
+</div>
