@@ -1,0 +1,275 @@
+ 
+<div id="page" class="center ">
+	<section class="width4 stroke"> 
+	<div id="content">
+		<h2>
+			Create Achievement
+		</h2>
+<script src="/Scripts/jquery.validate.min.js" type="text/javascript"></script> <script src="/Scripts/jquery.validate.unobtrusive.min.js" type="text/javascript"></script> 
+
+		<form action="/Admin/CreateAchievement" enctype="multipart/form-data" id="parentForm" method="post">
+
+			<fieldset style="margin-top: 15px; padding: 20px;">
+				<legend style="font-weight: bold;">Title and Description</legend> 
+				<div class="editor-label">
+					<label for="title">title</label> 
+				</div>
+				<div class="editor-field">
+					<input class="text-box single-line" id="title" name="title" type="text" size="60" value="" />
+					<span class="field-validation-valid" data-valmsg-for="title" data-valmsg-replace="true"></span> 
+				</div>
+				<div class="editor-label">
+					<label for="description">description</label> 
+				</div>
+				<div class="editor-field">
+					<textarea cols="60" id="description" name="description" rows="3">
+					</textarea> <span class="field-validation-valid" data-valmsg-for="description" data-valmsg-replace="true"></span> 
+				</div>
+			</fieldset>
+			
+			<fieldset style="margin-top: 15px; padding: 20px;">
+				<legend style="font-weight: bold;">Requirements</legend>
+				<div class="editor-label">
+					<label for="requirements_0_">requirements[0]</label> 
+				</div>
+				<div class="editor-field">
+					<input class="text-box single-line" id="requirements_0_" name="requirements[0]" size="60" type="text" value="" />
+					<span class="field-validation-valid" data-valmsg-for="requirements[0]" data-valmsg-replace="true"></span> 
+				</div>
+				<div class="editor-label">
+					<label for="requirements_1_">requirements[1]</label> 
+				</div>
+				<div class="editor-field">
+					<input class="text-box single-line" id="requirements_1_" name="requirements[1]" size="60" type="text" value="" />
+					<span class="field-validation-valid" data-valmsg-for="requirements[1]" data-valmsg-replace="true"></span> 
+				</div>
+				<div class="editor-label">
+					<label for="requirements_2_">requirements[2]</label> 
+				</div>
+				<div class="editor-field">
+					<input class="text-box single-line" id="requirements_2_" name="requirements[2]" size="60" type="text" value="" />
+					<span class="field-validation-valid" data-valmsg-for="requirements[2]" data-valmsg-replace="true"></span> 
+				</div>
+				<div class="editor-label">
+					<label for="requirements_3_">requirements[3]</label> 
+				</div>
+				<div class="editor-field">
+					<input class="text-box single-line" id="requirements_3_" name="requirements[3]" size="60" type="text" value="" />
+					<span class="field-validation-valid" data-valmsg-for="requirements[3]" data-valmsg-replace="true"></span> 
+				</div>
+				<div class="editor-label">
+					<label for="requirements_4_">requirements[4]</label> 
+				</div>
+				<div class="editor-field">
+					<input class="text-box single-line" id="requirements_4_" name="requirements[4]" size="60" type="text" value="" />
+					<span class="field-validation-valid" data-valmsg-for="requirements[4]" data-valmsg-replace="true"></span> 
+				</div>
+				<div class="editor-label">
+					<label for="requirements_5_">requirements[5]</label> 
+				</div>
+				<div class="editor-field">
+					<input class="text-box single-line" id="requirements_5_" name="requirements[5]" size="60" type="text" value="" />
+					<span class="field-validation-valid" data-valmsg-for="requirements[5]" data-valmsg-replace="true"></span> 
+				</div>
+				<div class="editor-label">
+					<label for="requirements_6_">requirements[6]</label> 
+				</div>
+				<div class="editor-field">
+					<input class="text-box single-line" id="requirements_6_" name="requirements[6]" size="60" type="text" value="" />
+					<span class="field-validation-valid" data-valmsg-for="requirements[6]" data-valmsg-replace="true"></span> 
+				</div>
+			</fieldset>
+			
+			<fieldset style="margin-top: 15px; padding: 20px;">
+				<legend style="font-weight: bold;">Point Assignment</legend>
+				<table border="0" width="400">
+					<tr>
+						<td><label for="makePt">Create</label></td>
+						<td><label for="learnPt">Learn</label></td>
+						<td><label for="socialPt">Socialize</label></td>
+						<td><label for="explorePt">Explore</label></td>
+					</tr>
+					
+					<tr>
+						<td>
+							<select data-val="true" data-val-number="The field makePt must be a number." data-val-required="The makePt field is required." id="makePt" name="makePt">
+								<option selected="selected">0</option>
+								<option>1</option>
+								<option>2</option>
+								<option>3</option>
+								<option>4</option>
+							</select>
+							<span class="field-validation-valid" data-valmsg-for="makePt" data-valmsg-replace="true"></span> 
+						</td>
+
+						<td>
+							<select data-val="true" data-val-number="The field learnPt must be a number." data-val-required="The learnPt field is required." id="learnPt" name="learnPt">
+								<option selected="selected">0</option>
+								<option>1</option>
+								<option>2</option>
+								<option>3</option>
+								<option>4</option>
+							</select>
+							<span class="field-validation-valid" data-valmsg-for="learnPt" data-valmsg-replace="true"></span> 
+							</td>
+						<td>
+							<select data-val="true" data-val-number="The field socialPt must be a number." data-val-required="The socialPt field is required." id="socialPt" name="socialPt">
+								<option selected="selected">0</option>
+								<option>1</option>
+								<option>2</option>
+								<option>3</option>
+								<option>4</option>
+							</select>	
+							<span class="field-validation-valid" data-valmsg-for="socialPt" data-valmsg-replace="true"></span> 
+						<td>
+							<select data-val="true" data-val-number="The field explorePt must be a number." data-val-required="The explorePt field is required." id="explorePt" name="explorePt">
+								<option selected="selected">0</option>
+								<option>1</option>
+								<option>2</option>
+								<option>3</option>
+								<option>4</option>
+							</select>	
+							<span class="field-validation-valid" data-valmsg-for="explorePt" data-valmsg-replace="true"></span> 
+						</td>
+						</td>
+					</tr>
+				</table>
+						
+			</fieldset>
+						
+						
+						
+			<fieldset style="margin-top: 15px; padding: 20px;">
+				<legend style="font-weight: bold;">Achievement Type</legend>
+
+				<div>
+					<input checked="checked" data-val="true" data-val-number="The field achievementBehaviour must be a number." data-val-required="The achievementBehaviour field is required." id="achievementBehaviour" name="achievementBehaviour" type="radio" value="0" />
+					<label for="Basic_Achievement">Basic Achievement</label> 
+				</div>
+				<div> 
+					<input id="achievementBehaviour" name="achievementBehaviour" type="radio" value="1" />
+					<label for="Repeatable_Achievement">Repeatable Achievement</label> 
+				</div>
+				<div>
+					<input id="achievementBehaviour" name="achievementBehaviour" type="radio" value="2" />
+					<label for="Threshold_Achievement">Threshold Achievement</label> 
+				</div>
+			<fieldset style="margin-top: 15px; padding: 20px;">
+				<legend style="font-weight: bold;">For Threshold Achievements ONLY</legend>
+					<div class="editor-label">
+						<label for="parentID">Select Repeatable Achievement ID</label> 
+					</div>
+					<div class="editor-field">
+						<select data-val="true" data-val-number="The field parentID must be a number." id="parentID" name="parentID">
+							<option value="9">flocking to meetings</option>
+						</select>
+						<span class="field-validation-valid" data-valmsg-for="parentID" data-valmsg-replace="true"></span> 
+					</div>
+					<div class="editor-label">
+						<label for="threshold">The achievement unlocks after the user repeates the achievement how many times?</label> 
+					</div>
+					<div class="editor-field">
+						<input class="text-box single-line" data-val="true" data-val-number="The field threshold must be a number." id="threshold" name="threshold" type="text" size="3" value="" />
+						<span class="field-validation-valid" data-valmsg-for="threshold" data-valmsg-replace="true"></span> 
+					</div>
+				</fieldset>
+			</fieldset>
+			
+				
+			<fieldset style="margin-top: 15px; padding: 20px;">
+				<legend style="font-weight: bold;">Hidden Achievement?</legend>
+				<div class="editor-label">
+					<label for="isHidden">Hide Achievement</label> 
+				</div>
+				<div class="editor-field">
+					<input class="check-box" data-val="true" data-val-required="The isHidden field is required." id="isHidden" name="isHidden" type="checkbox" value="true" />
+					<input name="isHidden" type="hidden" value="false" />
+					<span class="field-validation-valid" data-valmsg-for="isHidden" data-valmsg-replace="true"></span> 
+				</div>
+			</fieldset>
+			
+			<fieldset style="margin-top: 15px; padding: 20px;">
+				<legend style="font-weight: bold;">Achievement Validation Method</legend>
+				<div class="editor-label">
+					<label for="type">DEV NOTE: ONLY SCANS WILL GET CARETAKERS, ONLY USER SUBMISSIONS WILL SELECT FROM THE SUBMISSION TYPE, AND ONLY SYSTEM ACHIEVEMENTS WILL SELECT FROM THE SYSTEM EVENT LIST</label> 
+				</div>
+				<div class="editor-field">
+					<select data-val="true" data-val-number="The field type must be a number." data-val-required="The type field is required." id="type" size="5" name="type">
+						<option value="1">UserSubmission</option>
+						<option value="2">Scan</option>
+						<option value="3">System</option>
+						<option value="4">AdminAssigned</option>
+						<option value="5">Threshold</option>
+					</select>
+					<span class="field-validation-valid" data-valmsg-for="type" data-valmsg-replace="true"></span> 
+				</div>
+				<br />
+				<br />
+				<label for="systemAchievementType">For System Achievements Only: Choose Trigger</label> 
+				<div class="editor-field">
+					<select data-val="true" data-val-number="The field systemAchievementType must be a number." id="systemAchievementType" name="systemAchievementType">
+						<option value="1">Six Word Bio</option>
+						<option value="2">It&#39;ll Last Longer</option>
+						<option value="3">No One Goes Alone</option>
+						<option value="4">Social Chrysalis</option>
+						<option value="5">Social Butterfly</option>
+						<option value="6">Lab Rat</option>
+						<option value="7">Millennial</option>
+						<option value="8">10K</option>
+						<option value="9">Ring x4</option>
+						<option value="10">Ring x50</option>
+						<option value="11">Ring x100</option>
+						<option value="12">A Funny Thing Happened on the Way to the Forum</option>
+						<option value="13">Beyond Your Years</option>
+						<option value="14">Social Little Critter</option>
+					</select>
+					<span class="field-validation-valid" data-valmsg-for="systemAchievementType" data-valmsg-replace="true"></span> 
+				</div>
+				<br />
+				<br />
+				<div class="editor-label">
+					<label for="contentType">For User Content ONLY: Choose Content Type</label> 
+				</div>
+				<div class="editor-field">
+					<select data-val="true" data-val-number="The field contentType must be a number." id="contentType" name="contentType">
+						<option value="1">Image</option>
+						<option value="2">URL</option>
+						<option value="3">Text</option>
+					</select>
+					<span class="field-validation-valid" data-valmsg-for="type" data-valmsg-replace="true"></span> 
+				</div>
+				<br />
+				<br />
+				<input data-val="true" data-val-number="The field adminID must be a number." data-val-required="The adminID field is required." id="adminID" name="adminID" type="hidden" value="11" />
+				<div class="editor-label">
+					<label for="caretakers">For QR Scans ONLY: Choose caretaker(s)</label> 
+				</div>
+				<div class="editor-field">
+					<select id="caretakers" multiple="multiple" name="caretakers">
+						<option value="6">Benjamin Snyder</option>
+						<option value="9">JPP Admin</option>
+						<option value="10">IGM Office</option>
+						<option value="11">Elizabeth Lawley</option>
+						<option value="13">Elouise Oyzon</option>
+						<option value="15">Andrew Phelps</option>
+					</select>
+					<span class="field-validation-valid" data-valmsg-for="caretakers" data-valmsg-replace="true"></span> 
+				</div>
+			</fieldset>
+			<fieldset style="margin-top: 15px; padding: 20px;">
+				<legend style="font-weight: bold;">Achievement Icon</legend>
+				<div class="editor-field">
+					<input type="file" name="icon" />
+				</div>
+			</fieldset>
+				<p>
+					<input type="submit" id="assignbutton" value="Create Achievement" />
+				</p>
+
+		</form>
+		<div>
+			<a href="/Admin">Back to List</a> 
+		</div>
+	</div>
+	</section> 
+</div>
