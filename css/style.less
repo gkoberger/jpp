@@ -1056,37 +1056,6 @@ table.stats {
             }
         }
     }
-
-
-    #my-achievements-tracking {
-        overflow: hidden;
-        max-height: none;
-        ul {
-            margin: 18px 0 0;
-            padding: 0;
-            li {
-                .border-box;
-                background-image: url("../imgs/checks.png");
-                background-repeat: no-repeat;
-                display: inline-block;
-                height: 25px;
-                padding: 6px 0 0 45px;
-                width: 480px;
-                background-position: 15px 5px;
-                font-size: 0.9em;
-                a {
-                    color: @jpp-login-blue;
-                    text-decoration: none;
-                    &:hover {
-                        text-decoration: underline;
-                    }
-                }
-                &.on {
-                    background-position: 15px -25px;
-                }
-            }
-        }
-    }
     .quest-count {
         padding: 40px 0;
         text-align: center;
@@ -1095,6 +1064,36 @@ table.stats {
         strong {
             font-size: 40px;
             font-family: @classic;
+        }
+    }
+}
+
+#my-achievements-tracking  {
+    overflow: hidden;
+    max-height: none;
+    ul {
+        margin: 18px 0 0;
+        padding: 0;
+        li {
+            .border-box;
+            background-image: url("../imgs/checks.png");
+            background-repeat: no-repeat;
+            display: inline-block;
+            height: 25px;
+            padding: 6px 0 0 45px;
+            width: 49%;
+            background-position: 15px 5px;
+            font-size: 0.9em;
+            a {
+                color: @jpp-login-blue;
+                text-decoration: none;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+            &.on {
+                background-position: 15px -25px;
+            }
         }
     }
 }
@@ -1334,14 +1333,16 @@ table.stats {
 }
 
 /* Individual Achievements */
-#page.page-achievement {
+#page.page-achievement,
+#page.page-quest {
     padding-top: 2px;
     padding-bottom: 0;
     background-image: url(../imgs/bg-achievement.png);
     background-position: center 0;
     background-repeat: no-repeat;
 }
-#page-achievement {
+#page-achievement,
+#page-quest {
     #my-achievements {
         margin-top: 0;
     }
@@ -1706,6 +1707,13 @@ table.stats {
         &:hover {
             opacity: 0.8;
         }
+    }
+}
+
+/* Page: Quests */
+#page-quest {
+    #my-achievements-tracking {
+        margin-bottom: 2em;
     }
 }
 

@@ -1027,37 +1027,6 @@ table.stats td:nth-child(3) {
   text-decoration: none;
   font-size: 11px;
 }
-#my-achievements-all #my-achievements-tracking {
-  overflow: hidden;
-  max-height: none;
-}
-#my-achievements-all #my-achievements-tracking ul {
-  margin: 18px 0 0;
-  padding: 0;
-}
-#my-achievements-all #my-achievements-tracking ul li {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  background-image: url("../imgs/checks.png");
-  background-repeat: no-repeat;
-  display: inline-block;
-  height: 25px;
-  padding: 6px 0 0 45px;
-  width: 480px;
-  background-position: 15px 5px;
-  font-size: 0.9em;
-}
-#my-achievements-all #my-achievements-tracking ul li a {
-  color: #3fa9f5;
-  text-decoration: none;
-}
-#my-achievements-all #my-achievements-tracking ul li a:hover {
-  text-decoration: underline;
-}
-#my-achievements-all #my-achievements-tracking ul li.on {
-  background-position: 15px -25px;
-}
 #my-achievements-all .quest-count {
   padding: 40px 0;
   text-align: center;
@@ -1067,6 +1036,37 @@ table.stats td:nth-child(3) {
 #my-achievements-all .quest-count strong {
   font-size: 40px;
   font-family: "Helvetica", "Arial", "Microsoft Sans Serif", "Helvetica", "Arial", sans-serif;
+}
+#my-achievements-tracking {
+  overflow: hidden;
+  max-height: none;
+}
+#my-achievements-tracking ul {
+  margin: 18px 0 0;
+  padding: 0;
+}
+#my-achievements-tracking ul li {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background-image: url("../imgs/checks.png");
+  background-repeat: no-repeat;
+  display: inline-block;
+  height: 25px;
+  padding: 6px 0 0 45px;
+  width: 49%;
+  background-position: 15px 5px;
+  font-size: 0.9em;
+}
+#my-achievements-tracking ul li a {
+  color: #3fa9f5;
+  text-decoration: none;
+}
+#my-achievements-tracking ul li a:hover {
+  text-decoration: underline;
+}
+#my-achievements-tracking ul li.on {
+  background-position: 15px -25px;
 }
 /* Page: Edit User */
 .user-profile-edit {
@@ -1326,17 +1326,20 @@ table.stats td:nth-child(3) {
   text-align: center;
 }
 /* Individual Achievements */
-#page.page-achievement {
+#page.page-achievement,
+#page.page-quest {
   padding-top: 2px;
   padding-bottom: 0;
   background-image: url(../imgs/bg-achievement.png);
   background-position: center 0;
   background-repeat: no-repeat;
 }
-#page-achievement #my-achievements {
+#page-achievement #my-achievements,
+#page-quest #my-achievements {
   margin-top: 0;
 }
-#page-achievement #achievement {
+#page-achievement #achievement,
+#page-quest #achievement {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -1347,20 +1350,24 @@ table.stats td:nth-child(3) {
   position: relative;
   width: 774px;
 }
-#page-achievement #achievement h3 {
+#page-achievement #achievement h3,
+#page-quest #achievement h3 {
   color: #336666;
   font-size: 22px;
 }
-#page-achievement #achievement h2 {
+#page-achievement #achievement h2,
+#page-quest #achievement h2 {
   color: #000;
   font-size: 30px;
   margin-bottom: 20px;
 }
-#page-achievement #achievement a {
+#page-achievement #achievement a,
+#page-quest #achievement a {
   color: #006699;
   text-decoration: none;
 }
-#page-achievement #achievement a:hover {
+#page-achievement #achievement a:hover,
+#page-quest #achievement a:hover {
   text-decoration: underline;
 }
 /* Main user page */
@@ -1696,6 +1703,10 @@ table.stats td:nth-child(3) {
 }
 #page-tutorial .go:hover {
   opacity: 0.8;
+}
+/* Page: Quests */
+#page-quest #my-achievements-tracking {
+  margin-bottom: 2em;
 }
 /* Page: Admin Pages */
 #userID {
