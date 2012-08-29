@@ -1719,3 +1719,36 @@ table.stats td:nth-child(3) {
   font-size: 18px;
   margin-top: 20px;
 }
+/* Page: TOS */
+.page-tos {
+  background-image: url("../imgs/bg-about.png");
+  background-position: 20px 0;
+  background-repeat: no-repeat;
+}
+#page-tos .width3 {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: #8db836;
+  margin-top: 2em;
+  padding: 2em 4em;
+}
+#page-tos .width3 h2 {
+  color: #fff;
+  margin-bottom: 15px;
+  margin-top: 1em;
+}
+#page-tos .width3 p,
+#page-tos .width3 ol {
+  list-style: lower-alpha;
+  font-size: 14px;
+  color: #000;
+  margin: 0 3em 1em;
+}
+#page-tos .width3 p li,
+#page-tos .width3 ol li {
+  padding-bottom: 4px;
+}
+#page-tos .width3 .accept {
+  text-align: right;
+}
