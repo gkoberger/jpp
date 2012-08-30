@@ -189,6 +189,7 @@ function createSlider() {
     var left = 0;
 
     var hide_controls = $slider.hasClass('hide_controls');
+    var no_autoslide = $slider.hasClass('no_autoslide');
 
     if(!$wrapper) return;
 
@@ -224,9 +225,11 @@ function createSlider() {
         $slider.trigger('change', [Math.abs(left / w)]);
     });
 
-    var autoslide = setInterval(function() {
-        $slider.trigger('next');
-    }, 15000);
+    if(!no_autoslide) {
+        var autoslide = setInterval(function() {
+            $slider.trigger('next');
+        }, 300);
+    }
 
     $slider.bind('stop', function() {
             clearInterval(autoslide);
@@ -239,7 +242,7 @@ function createSlider() {
         $left.click(function(e) {
             e.preventDefault();
             $('#slider').trigger('prev');
-            clearInterval(autoslide);
+            if(autoslide) clearInterval(autoslide);
         });
 
         var i = 0;
@@ -250,7 +253,7 @@ function createSlider() {
             $a.click(function(e) {
                 e.preventDefault();
                 $('#slider').trigger('goto', [num]);
-                clearInterval(autoslide);
+                if(autoslide) clearInterval(autoslide);
             });
             i++;
         });
@@ -260,7 +263,7 @@ function createSlider() {
         $right.click(function(e) {
             e.preventDefault();
             $('#slider').trigger('next');
-            clearInterval(autoslide);
+            if(autoslide) clearInterval(autoslide);
         });
 
         $slider.after($controls);
