@@ -1293,33 +1293,6 @@ table.stats td:nth-child(3) {
 #page-friends .person.quad p {
   margin-left: 45px;
 }
-#search-bar {
-  margin-left: -35px;
-  width: 1060px;
-  background-color: #3fa9f5;
-  clear: both;
-  padding: 5px 35px;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-#search-bar input {
-  padding: 7px 10px;
-  background-color: #fff;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  border-radius: 10px;
-  border: 0 none;
-  font-size: 0.8em;
-  -moz-transition: width 0.3s ease-out;
-  -webkit-transition: width 0.3s ease-out;
-  transition: width 0.3s ease-out;
-  width: 250px;
-}
-#search-bar input:active,
-#search-bar input:focus {
-  width: 300px;
-}
 #no-results {
   display: block;
   padding: 2em;
@@ -1369,6 +1342,68 @@ table.stats td:nth-child(3) {
 #page-achievement #achievement a:hover,
 #page-quest #achievement a:hover {
   text-decoration: underline;
+}
+#page-achievements a.on,
+#page-friends a.on {
+  background-color: #eee;
+}
+#page-achievements #my-achievements,
+#page-friends #my-achievements {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 25px 0 0 126px;
+  width: 738px;
+  border-top: 6px solid rgba(151, 177, 99, 0.45);
+}
+#page-achievements #my-achievements .clear-box,
+#page-friends #my-achievements .clear-box {
+  background-color: #3fa9f5;
+}
+#page-achievements #my-achievements h3,
+#page-friends #my-achievements h3,
+#page-achievements #my-achievements div,
+#page-friends #my-achievements div,
+#page-achievements #my-achievements a,
+#page-friends #my-achievements a {
+  border-bottom: 6px solid #ddd;
+}
+#page-achievements #my-achievements a,
+#page-friends #my-achievements a {
+  border-left: 6px solid #ddd;
+}
+#page-achievements #search-bar,
+#page-friends #search-bar {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: #FFFFFF;
+  clear: both;
+  margin: 0 0 0 126px;
+  width: 738px;
+  padding: 20px;
+  background-color: #eee;
+  border-bottom: 1px solid #ddd;
+}
+#page-achievements #search-bar #filter,
+#page-friends #search-bar #filter {
+  border: 1px solid #ccc;
+  padding: 7px 10px;
+  background-color: #fff;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  font-size: 0.8em;
+  -moz-transition: width 0.3s ease-out;
+  -webkit-transition: width 0.3s ease-out;
+  transition: width 0.3s ease-out;
+  width: 250px;
+}
+#page-achievements #search-bar #filter:active,
+#page-friends #search-bar #filter:active,
+#page-achievements #search-bar #filter:focus,
+#page-friends #search-bar #filter:focus {
+  width: 300px;
 }
 /* Main user page */
 #page-user-main h2 {
