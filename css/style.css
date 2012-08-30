@@ -1347,6 +1347,11 @@ table.stats td:nth-child(3) {
   background-position: center 0;
   background-repeat: no-repeat;
 }
+#page-achievement #my-achievements-all,
+#page-quest #my-achievements-all {
+  margin-left: -36px;
+  width: 1060px;
+}
 #page-achievement #my-achievements,
 #page-quest #my-achievements {
   margin-top: 0;
