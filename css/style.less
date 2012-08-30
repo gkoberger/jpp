@@ -1096,10 +1096,15 @@ table.stats {
         }
     }
     .quest-count {
-        padding: 40px 0;
+        padding: 0px 0;
         text-align: center;
         color: @note-gray;
         font-weight: normal;
+        text-align: right;
+        .stop {
+            margin-right: 0;
+            margin-bottom: 15px;
+        }
         strong {
             font-size: 40px;
             font-family: @classic;
@@ -1785,22 +1790,24 @@ table.stats {
     .tracked a {
         font-size: 11px;
         text-decoration: none;
-        &.stop, &.start {
-            margin-right: 15px;
-            width: 110px;
-            height: 38px;
-            display: inline-block;
-            &:hover {
-                opacity: 0.8;
-            }
-        }
-        &.stop {
-            background-image: url(../imgs/stop-tracking.png);
-        }
-        &.start {
-            background-image: url(../imgs/start-tracking.png);
-        }
     }
+}
+
+.stop, .start {
+    margin-right: 15px;
+    width: 110px;
+    height: 38px;
+    display: inline-block;
+    text-indent: -90000px;
+    &:hover {
+        opacity: 0.8;
+    }
+}
+.stop {
+    background-image: url(../imgs/stop-tracking.png);
+}
+.start {
+    background-image: url(../imgs/start-tracking.png);
 }
 
 /* Page: Admin Pages */

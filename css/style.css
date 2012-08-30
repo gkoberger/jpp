@@ -1068,10 +1068,15 @@ table.stats td:nth-child(3) {
   font-size: 11px;
 }
 #my-achievements-all .quest-count {
-  padding: 40px 0;
+  padding: 0px 0;
   text-align: center;
   color: #999999;
   font-weight: normal;
+  text-align: right;
+}
+#my-achievements-all .quest-count .stop {
+  margin-right: 0;
+  margin-bottom: 15px;
 }
 #my-achievements-all .quest-count strong {
   font-size: 40px;
@@ -1792,21 +1797,22 @@ table.stats td:nth-child(3) {
   font-size: 11px;
   text-decoration: none;
 }
-#page-quest .tracked a.stop,
-#page-quest .tracked a.start {
+.stop,
+.start {
   margin-right: 15px;
   width: 110px;
   height: 38px;
   display: inline-block;
+  text-indent: -90000px;
 }
-#page-quest .tracked a.stop:hover,
-#page-quest .tracked a.start:hover {
+.stop:hover,
+.start:hover {
   opacity: 0.8;
 }
-#page-quest .tracked a.stop {
+.stop {
   background-image: url(../imgs/stop-tracking.png);
 }
-#page-quest .tracked a.start {
+.start {
   background-image: url(../imgs/start-tracking.png);
 }
 /* Page: Admin Pages */
