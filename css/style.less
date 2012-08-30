@@ -205,6 +205,44 @@ p, ul {
     }
 }
 
+.mediumquad {
+    background-repeat: no-repeat;
+    height: 105px;
+    width: 105px;
+    position: relative;
+    background-image: url(../imgs/mediumquad.png);
+    font-size: 24px;
+    margin-top: 50px;
+    div {
+        .border-box();
+        color: #FFFFFF;
+        height: 51px;
+        width: 51px;
+        position: absolute;
+        &.quad-explore {
+            padding: 1px 6px 0 5px;
+            top: 51px;
+            left: 51px;
+        }
+        &.quad-social {
+            padding: 1px 6px 0;
+            top: 51px;
+            left: 0;
+            text-align: right;
+        }
+        &.quad-learn {
+            padding: 21px 4px 0 4px;
+            top: 0;
+            left: 51px;
+        }
+        &.quad-make {
+            padding: 21px 6px 0;
+            text-align: right;
+            top: 0;
+            left: 0;
+        }
+    }
+}
 .tinyquad {
     background-repeat: no-repeat;
     bottom: 0;
