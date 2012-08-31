@@ -228,7 +228,7 @@ function createSlider() {
     if(!no_autoslide) {
         var autoslide = setInterval(function() {
             $slider.trigger('next');
-        }, 300);
+        }, 15000);
     }
 
     $slider.bind('stop', function() {
