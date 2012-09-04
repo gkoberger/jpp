@@ -79,6 +79,9 @@ ul {
 .controls .pacman-dot:hover {
   background-color: #edd064;
 }
+.controls .pacman-dot.on {
+  background-color: #FF7901;
+}
 .controls .jpp {
   display: inline-block;
   margin: 0 20px;
@@ -1825,6 +1828,9 @@ table.stats td:nth-child(3) {
 #assignbutton {
   font-size: 18px;
   margin-top: 20px;
+}
+#page-distribute fieldset {
+  float: left;
 }
 /* Page: TOS */
 .page-tos {

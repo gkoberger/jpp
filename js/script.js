@@ -232,13 +232,19 @@ function createSlider() {
     }
 
     $slider.bind('stop', function() {
-            clearInterval(autoslide);
+        clearInterval(autoslide);
     });
 
     if(!hide_controls) {
         var $controls = $('<div>', {'class': 'controls'});
         var $left = $('<a>', {'href': '#', 'class': 'jpp rotate small'});
         $controls.append($left);
+
+        $slider.bind('change', function(e, i) {
+            $controls.find('.on').removeClass('on');
+            $controls.find('.pacman-dot').eq(i).addClass('on');
+        });
+
         $left.click(function(e) {
             e.preventDefault();
             $('#slider').trigger('prev');
@@ -268,6 +274,7 @@ function createSlider() {
 
         $slider.after($controls);
     }
+    $slider.trigger('change', [0]);
 }
 
 function showErrors() {
