@@ -341,6 +341,21 @@ function onloader() {
         });
     }
 
+    if($('#page-admin-dist').length) {
+        var $options = {};
+        $options['person'] = $('#userID option');
+        $options['card'] = $('#cardID option');
+        $('#admin-box-search-person, #admin-box-search-card').keyup(function() {
+            var filter_text = $(this).val().toLowerCase();
+            var type = $(this).data('type');
+            $options[type].each(function() {
+                var text = $(this).text().toLowerCase();
+                var matches = text.indexOf(filter_text) != -1;
+                $(this).toggle(matches);
+            });
+        });
+    }
+
     showErrors();
     showSuccess();
 }

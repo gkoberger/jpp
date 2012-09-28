@@ -1869,3 +1869,73 @@ table.stats {
 
 }
 
+
+/* Admin Stuff */
+nav#admin-nav {
+    background-color: @light-gray;
+    h3 {
+        color: #666;
+        padding: 5px 10px;
+        font-family: @gills;
+        font-weight: normal;
+        border-top: 1px solid @jpp-logo-green;
+        border-bottom: 1px solid @jpp-logo-green;
+        font-size: 1.2em;
+    }
+    ul {
+        margin: 0;
+        padding: 0 0 20px 0;
+        a {
+            padding: 3px 10px;
+            display: block;
+            text-decoration: none;
+            color: #666;
+            &:hover, &.on {
+                background-color: #eee;
+            }
+        }
+    }
+}
+
+#page-admin-dist {
+    .admin-box-bottom {
+        padding-top: 10px;
+        text-align: right;
+    }
+    .admin-box-blue {
+        .border-box();
+        padding: 15px;
+        background-color: @jpp-login-blue;
+    }
+    .admin-box-green {
+        .border-box();
+        padding: 15px;
+        background-color: @jpp-login-green;
+    }
+    #admin-box-search-person,
+    #admin-box-search-card {
+        .border-box();
+        border: 0 none;
+        font-size: 14px;
+        margin-bottom: 5px;
+        padding: 9px;
+        width: 100%;
+    }
+    #userID, #cardID {
+        width: 100%;
+        font-size: 12px;
+        height: 300px;
+        option {
+            padding: 2px;
+            color: #666;
+        }
+    }
+}
+
+#page-admin-achievements {
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+}

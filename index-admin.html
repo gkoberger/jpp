@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Just Press Play</title>
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="css/lib/baseline.grid.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.less" />
+    <link rel="shortcut icon" href="/favicon.ico" >
+    <!--[if IE]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="http://fast.fonts.com/jsapi/f90e90af-f46d-4cc1-89bd-17e432a786a0.js"></script>
+  </head>
+  <body id="home" data-url="">
+    <header>
+      <section class="center">
+        <h1><a href="u_main.html">Just Press Play</a></h1>
+        <nav>
+          <ul>
+            <li><a href="u_main.html">Home</a></li>
+            <li><a href="u_profile.html">Profile</a></li>
+            <li><a href="u_achievements.html">Achievements</a></li>
+            <li><a href="u_friend.html">People</a></li>
+            <li><a href="#">Forums</a></li>
+          </ul>
+        </nav>
+
+        <nav class="logged-in">
+          <a href="u_edit.html">Weez Oyzon</a>
+          <a href="#" class="yougotmail">(2)</a>
+          <a href="#" class="logout">logout</a>
+        </nav>
+      </section>
+    </header>
+
+    <div id="page" class="center page-CHANGETHIS"> <!-- This needs a class of 'page-[pagename]' -->
+      <nav class="width1 column first" id="admin-nav">
+        <h3>Achievements</h3>
+        <ul>
+          <li><a href="#a_edit_achievements.html">Edit Achievements</a></li>
+          <li><a href="#a_achievements.html">Achievement Distribution</a></li>
+        </ul>
+        <h3>Card Assignment</h3>
+        <ul>
+          <li><a href="#a_card.html">Card Distribution</a></li>
+        </ul>
+      </nav>
+      <section class="width3 column stroke">
+        <div id="content">
+          <!-- This is where the various .html pages go -->
+        </div>
+      </section>
+    </div>
+
+    <footer>
+      <div class="center">
+        <nav>
+          <a href="#">Tutorial</a> |
+          <a href="#">Terms of Use</a> |
+          <a href="#">About</a> |
+          <a href="#">News</a> |
+          <a href="#">Credits</a> |
+          <a href="#">Contact</a>
+        </nav>
+        <a href="http://research.microsoft.com/en-us/" class="ms logo" target="_blank">Microsoft Research</a>
+        <a href="http://rit.edu/" class="rit logo" target="_blank">RIT</a>
+        <a href="http://igm.rit.edu/" class="igm logo" target="_blank">IGM</a>
+      </div>
+    </footer>
+
+
+    <script src="js/lib/jquery.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/lib/jquery.html5placeholder.min.js"></script>
+
+    <!-- Remove this from the actual version -->
+    <script>var user = true;</script>
+    <script src="demo-loader.js"></script>
+    <!-- Okay, the rest can stay -->
+
+  </body>
+</html>

@@ -1865,3 +1865,75 @@ table.stats td:nth-child(3) {
 #page-tos .width3 .accept {
   text-align: right;
 }
+/* Admin Stuff */
+nav#admin-nav {
+  background-color: #cccccc;
+}
+nav#admin-nav h3 {
+  color: #666;
+  padding: 5px 10px;
+  font-family: "Gill Sans", "Gill Sans W10 Medium", "Microsoft Sans Serif", "Helvetica", "Arial", sans-serif;
+  font-weight: normal;
+  border-top: 1px solid #99cc33;
+  border-bottom: 1px solid #99cc33;
+  font-size: 1.2em;
+}
+nav#admin-nav ul {
+  margin: 0;
+  padding: 0 0 20px 0;
+}
+nav#admin-nav ul a {
+  padding: 3px 10px;
+  display: block;
+  text-decoration: none;
+  color: #666;
+}
+nav#admin-nav ul a:hover,
+nav#admin-nav ul a.on {
+  background-color: #eee;
+}
+#page-admin-dist .admin-box-bottom {
+  padding-top: 10px;
+  text-align: right;
+}
+#page-admin-dist .admin-box-blue {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 15px;
+  background-color: #3fa9f5;
+}
+#page-admin-dist .admin-box-green {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 15px;
+  background-color: #8db836;
+}
+#page-admin-dist #admin-box-search-person,
+#page-admin-dist #admin-box-search-card {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 0 none;
+  font-size: 14px;
+  margin-bottom: 5px;
+  padding: 9px;
+  width: 100%;
+}
+#page-admin-dist #userID,
+#page-admin-dist #cardID {
+  width: 100%;
+  font-size: 12px;
+  height: 300px;
+}
+#page-admin-dist #userID option,
+#page-admin-dist #cardID option {
+  padding: 2px;
+  color: #666;
+}
+#page-admin-achievements ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
